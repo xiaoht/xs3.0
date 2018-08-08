@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../css/msstyle.css">
+    <link rel="stylesheet" type="text/css" href="/assets/lib.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont/iconfont.css">
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="nav-bar">
+    <div class="nav-menu">
+        <a href="javascript:void(0);" class="iconfont icon-back icon-chevron-thin-left" id="backapp"></a>
+        <ul class="tab-list-nav">
+            <li class="active">
+                <p>秒杀活动</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="head">
+    <img src="../../../img/seckill/ms_01.jpg" alt="">
+    <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=79&mine=mine"><img src="../../../img/seckill/ms_02.jpg" alt=""></a>
+</div>
+<div>
+    <div>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=81&mine=mine"><img src="../../../img/seckill/ms_03.jpg" alt=""></a>
+    </div>
+    <div>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=86&mine=mine"><img class="fl" width="50%" src="../../../img/seckill/ms_05.jpg" alt=""></a>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=88&mine=mine"><img class="fr" width="50%" src="../../../img/seckill/ms_06.jpg" alt=""></a>
+    </div>
+    <div>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=90&mine=mine"><img class="fl" width="50%" src="../../../img/seckill/ms_07.jpg" alt=""></a>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=92&mine=mine"><img class="fr" width="50%" src="../../../img/seckill/ms_08.jpg" alt=""></a>
+    </div>
+    <div>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=95&mine=mine"><img class="fl" width="50%" src="../../../img/seckill/ms_09.jpg" alt=""></a>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=98&mine=mine"><img class="fr" width="50%" src="../../../img/seckill/ms_10.jpg" alt=""></a>
+    </div>
+</div>
+<div class="head">
+    <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=97&mine=mine"><img src="../../../img/seckill/ms_11.jpg" alt=""></a>
+    <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=96&mine=mine"><img src="../../../img/seckill/ms_12.jpg" alt=""></a>
+</div>
+<div>
+    <div>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=94&mine=mine"><img class="fl" width="50%" src="../../../img/seckill/ms_13.jpg" alt=""></a>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=93&mine=mine"><img class="fr" width="50%" src="../../../img/seckill/ms_14.jpg" alt=""></a>
+    </div>
+    <div>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=91&mine=mine"><img class="fl" width="50%" src="../../../img/seckill/ms_15.jpg" alt=""></a>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=89&mine=mine"><img class="fr" width="50%" src="../../../img/seckill/ms_16.jpg" alt=""></a>
+    </div>
+    <div>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=87&mine=mine"><img class="fl" width="50%" src="../../../img/seckill/ms_17.jpg" alt=""></a>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=85&mine=mine"><img class="fr" width="50%" src="../../../img/seckill/ms_18.jpg" alt=""></a>
+    </div>
+    <div>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=84&mine=mine"><img class="fl" width="50%" src="../../../img/seckill/ms_19.jpg" alt=""></a>
+        <a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=82&mine=mine"><img class="fr" width="50%" src="../../../img/seckill/ms_20.jpg" alt=""></a>
+    </div>
+</div>
+<div>
+    <a href="https://m.xsbuy.cn/modules/views/commodity/superprod.html"><img src="../../../img/seckill/ms_21.jpg" alt=""></a>
+</div>
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/assets/hybrid_app.js"></script>
+<script type="text/javascript" src="/assets/common.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+<script>
+    var getCouponApi = 'v1/coupon/get-coupon-code';
+    var paramDic = getUrlString();
+    var back = document.getElementById("backapp");
+    var type = paramDic["type"];
+    // 原生返回
+    back.onclick = function () {
+        if (type == "ios") {
+            window.location.href = "ios://back";
+        } else if (type == "Android") {
+            JSkit.back();
+        } else {
+            window.history.back();
+        }
+    };
+
+</script>
+</body>
+</html>

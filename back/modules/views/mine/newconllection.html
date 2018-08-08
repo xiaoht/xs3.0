@@ -1,0 +1,31 @@
+<ion-view view-title="我的收藏" hide-nav-bar="false" hide-back-button="true">
+    <ion-nav-buttons side="left">
+        <button class="button icon ion-ios-arrow-left button-clear" ng-click="backButtonOnclick()"></button>
+
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button  ng-if="!editmode" style="background: transparent;border: none;color: #e42f46;" ng-click="gotoEditMode()">编辑</button>
+        <button  ng-if="editmode" style="background: transparent;border: none;color: #e42f46;" ng-click="gotoScaleMode()">完成</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="conllection-box">
+        <div class="width-50 float-l" ng-repeat="goods in myCollectionList" ng-click="toDetail(goods.goods_id)">
+            <div class="conllection-item">
+                <ion-checkbox style="position: absolute;margin-left: -6px;margin-top: -15px;padding-top: 14px;border-width: 0px;background-color: transparent" ng-if="editmode" ng-click="chooseGoods($index,goods.isChoosen)"></ion-checkbox>
+                <img ng-src="{{goods.goods_img}}" style="width: 90%;margin-left: 5%;margin-right: 5%">
+                <div class="conllection-item-title">{{goods.goods_name}}</div>
+                <div >
+                    <!--<span ng-if="goods.goods_activities_price == ''">{{goods.goods_price}}</span>-->
+                    <span class="conllection-item-price">{{goods.goods_activities_price | currency: '&yen'}}</span>
+                    <!--<span style="text-decoration: line-through;font-size: xx-small;">{{goods.goods_refer_price | currency: '&yen'}}</span>-->
+                </div>
+            </div>
+        </div>
+        </div>
+    </ion-content>
+    <div style="height: 40px;bottom: 0px;position: absolute;width: 100%;" ng-if="editmode">
+
+        <div class="cancel-controller" ng-click="cancelConllection()">取消收藏<span ng-if="totalChoosen > 0">({{totalChoosen}})</span></div>
+    </div>
+    </div>
+</ion-view>

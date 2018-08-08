@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+  <meta http-equiv="expires" content="0"> <!-- 清缓存 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- 禁止手动缩放 -->
+  <meta name="screen-orientation" content="portrait"> <!-- UC强制竖屏 -->
+  <meta name="x5-orientation" content="portrait"> <!-- QQ强制竖屏 -->
+  <meta name="apple-touch-fullscreen" content="yes"> <!-- 添加到主屏幕后全屏 -->
+  <meta name="wap-font-scale" content="no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes"> <!-- 全屏 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv="pragram" content="no-cache">
+  <title>订单列表</title>
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="/assets/lib.css">
+  <link rel="stylesheet" type="text/css" href="/assets/goodslist.css">
+  <link rel="stylesheet" type="text/css" href="/assets/fonts.css">
+  <link rel="stylesheet" type="text/css" href="/assets/order.css">
+  <link rel="stylesheet" type="text/css" href="/assets/mobiscroll.custom-2.17.0.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/register.css">
+  <link href="/fonts/iconfont/iconfont.css" rel="stylesheet">  
+  <style type="text/css">
+       h1{
+         margin-top: 0 !important;
+       }
+       .iconfont{
+            font-size: 10px;
+       }
+  </style>
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="nav-bar">
+  <div class="nav-menu">
+    <a href="javascript:void(0);" class="iconfont icon-back icon-chevron-thin-left" id="backapp"></a>
+    <h1 class="nav-tit">我的订单</h1>
+  </div>
+</div>
+<!-- 正文 -->
+<ion-scroll>
+<div class="wrapper">
+
+  <!-- tab切换标题栏 -->
+  <ion-header-bar align-title="left">
+  <div class="order-tab">
+    <ul class="tab-list">
+      <li class="active"><div><span>全部</span></div></li>
+      <li><div><span>待付款</span></div></li>
+      <p class="clear"></p>
+    </ul>
+  </div>
+  </ion-header-bar>
+  <!-- 订单列表不为空 -->
+
+  <div id="notEmptyOrder" style="display: block;">
+    <div id="wrapper">
+
+      <div id="scroller" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+        <div class="order-group" id="orderGroup" style=""></div>
+      </div>
+        <div class="iconfont scroll-bottom-ele " style="">
+          <!-- <img src="/assets/icon-loading01.gif" style="border-radius: 5px;"><span class="pullUpTxt">上拉加载更多</span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 订单列表为空 -->
+
+  <div id="emptyOrder" style="display: none;">
+    <div class="order-empty">
+      <p class="order-empty-img icon-icon_order"></p>
+      <p class="order-empty-txt">您还没有相关的订单~</p>
+    </div>
+  </div>
+</div>
+
+<!-- 取消订单原因 -->
+<div id="J_iuserDistrict" class="cancel_reason">
+  <input type="hidden" id="reasonSelector_dummy" value="" class="" placeholder="取消原因" readonly="" style="opacity: 0">
+  <ul id="reasonSelector"></ul>
+</div>
+
+<!-- JS -->
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+  <script type="text/javascript" src="/assets/hybrid_app.js"></script>
+  <script type="text/javascript" src="/assets/common.js"></script>
+<script type="text/javascript" src="/assets/iscroll-pull-loading.js"></script>
+
+<!-- 测试 orderList.js 完毕后补充加 https://xs-img.xsbuy.cn 前缀-->
+<script type="text/javascript" src="/assets/orderList.js"></script>
+
+<script type="text/javascript" src="/assets/mobiscroll.custom-2.17.0.min.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+
+</ion-scroll><div class="m-gotop-wrap"><div class="ic-gotop"><img src="/assets/arrow003.png"></div></div></body></html>

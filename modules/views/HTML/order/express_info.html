@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>快递信息</title>
+
+	<link rel="stylesheet" type="text/css" href="/assets/lib.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/iconfont/iconfont.css">
+	<style type="text/css">
+		h1{
+			margin-top: 0 !important;
+		}
+		.nav-menu {
+			z-index: 50;
+		}
+
+		.nav-menu .tab-list-nav {
+			width: 100%;
+			text-align: center;
+		}
+
+		.nav-menu .tab-list-nav li {
+			display: inline-block;
+			width: 150px;
+			margin-left: 6%;
+			text-align: center;
+			line-height: 43px;
+		}
+
+		.nav-menu .tab-list-nav li:first-of-type {
+			margin-left: -12px;
+		}
+
+		.nav-menu .tab-list-nav li p {
+			display: inline-block;
+			padding: 0 13px;
+			font-size: 16px;
+			color: #3e3e3e;
+		}
+
+		.nav-menu .tab-list-nav li.active p {
+			color: #e42f46;
+		}
+	</style>
+
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="nav-bar">
+	<div class="nav-menu">
+		<a href="javascript:void(0);" class="iconfont icon-back icon-chevron-thin-left" id="backapp"></a>
+		<ul class="tab-list-nav">
+			<li class="active">
+				<p>快递信息</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<div style="background-color: white;margin: 10px;">
+	<div class="express_info_page">
+		<iframe width="100%" height="600px" src="https://www.kuaidi100.com/kuaidiresult?id=83979204"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/assets/hybrid_app.js"></script>
+<script type="text/javascript" src="/assets/common.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+<script>
+    $(function () {
+        var ExpressInfoApi = 'v1/order/get-express-info';
+        var paramDic = getUrlString();
+        var express_name = paramDic["express_name"];
+        var express_number = paramDic["express_number"];
+        var back = document.getElementById("backapp");
+        var type = paramDic["type"];
+        // 原生返回
+        back.onclick = function () {
+            if (type == "ios") {
+                window.location.href = "ios://back";
+            } else if (type == "Android") {
+                JSkit.back();
+            } else {
+                window.history.back();
+            }
+            //window.location.href='/#/home';
+        };
+        function getExpressInfo() {
+			var urlHeader = ajaxLink + ExpressInfoApi;
+			var dataParam;
+			dataParam = "express_name="+express_name+"&express_number="+express_number;
+			//成功后执行的方法
+			function sucGetExpressInfo(response) {
+				if(response.ret == 0){
+
+                    $('.express_info_page').html('<iframe width="500px" height="500px" src="'+data.data+'"></iframe>')
+				}
+			}
+			ajaxWithHeader(urlHeader, dataParam, sucGetExpressInfo,'GET');
+        }
+        getExpressInfo();
+    })
+</script>
+</body></html>

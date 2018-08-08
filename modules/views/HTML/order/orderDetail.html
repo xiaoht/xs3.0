@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+  <meta http-equiv="expires" content="0"> <!-- 清缓存 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- 禁止手动缩放 -->
+  <meta name="screen-orientation" content="portrait"> <!-- UC强制竖屏 -->
+  <meta name="x5-orientation" content="portrait"> <!-- QQ强制竖屏 -->
+  <meta name="apple-touch-fullscreen" content="yes"> <!-- 添加到主屏幕后全屏 -->
+  <meta name="wap-font-scale" content="no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes"> <!-- 全屏 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv="pragram" content="no-cache">
+  <title>订单详情</title>
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="/assets/lib.css">
+  <link rel="stylesheet" type="text/css" href="/assets/goodslist.css">
+  <link rel="stylesheet" type="text/css" href="/assets/fonts.css">
+  <link rel="stylesheet" type="text/css" href="/assets/order_detail.css">
+  <link rel="stylesheet" type="text/css" href="/assets/mobiscroll.custom-2.17.0.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/register.css">
+  <link href="/fonts/iconfont/iconfont.css" rel="stylesheet">  
+  <style type="text/css">
+/*       h1{
+         margin-top: 0 !important;
+       }
+       .iconfont{
+            font-size: 10px;
+       }*/
+       .iconfont.icon-back{
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 2px;
+          font-size: 24px;
+          font-weight: bold;
+          height: 44px;
+          line-height: 44px;
+          padding: 0 10px;
+          color: #e42f46;
+          text-decoration: none;
+       }
+       .nav-menu h1.nav-tit{
+        font-size: 18px;
+       }
+  </style>
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="nav-bar">
+  <div class="nav-menu">
+    <a href="javascript:void(0);" class="iconfont icon-back  con-chevron-thin-left" id="backapp"></a>
+    <h1 class="nav-tit">订单详情</h1>
+  </div>
+</div>
+<!-- 正文 -->
+<div class="wrapper">
+  <!-- 状态信息 -->
+  <div class="order-explan" id="orderExplan">
+    <i class="icon-icon_right2" style="display: none;"></i>
+
+    <p id="orderExplanStatus">订单状态：未知</p>
+    <p id="orderExplanNum">订单号：00000000000</p>
+    <p id="orderExplanTime">订单时间：00-00-00 00:00:00</p>
+  </div>
+  <!-- 物流信息 -->
+  <div class="order-logistic" id="orderLogistic">
+
+    <p id="orderLogisticStatus"></p>
+    <!--<p id="orderLogisticTime"></p>-->
+    <!--<i class="icon-chevron-thin-right"></i>-->
+  </div>
+  <!-- 支付信息 -->
+  <div class="order-paydetail">
+
+    <p id="orderPaydetail"></p>
+  </div>
+  <!-- 收件人信息 -->
+  <div class="order-shipaddress" id="orderShipaddress"></div>
+  <!-- 商品信息 -->
+  <div class="order-module" id="orderModule"></div>
+
+  <!-- 发票信息 -->
+  <div class="order-bill">
+    <p class="order-bill-tit">发票信息</p>
+    <div class="order-bill-con">
+      <p id="invoiceTittleP">发票抬头<span id="invoiceTittle">个人</span></p>
+      <p id="invoiceTaxNoP" style="display: none;">纳税人识别号<span id="invoiceTaxNo"></span></p>
+      <!-- <p id="invoiceUrlP">电子发票<span id="invoiceUrlSP" style="color: #e42f46;">请签收7日后再下载</span></p> -->
+    
+    </div>
+  </div>
+
+  <div class="order-bill">
+    <p class="order-bill-tit">物流信息</p>
+    <div class="order-bill-con">
+      <p id="invoiceTittleP">物流编号<span id="express-number"></span></p>
+    </div>
+  </div>
+
+  <div class="order-bill" id="orderTips">
+   
+  </div>
+
+
+  <!-- 结算信息 -->
+  <div class="order-bill">
+    <p class="order-bill-tit">结算</p>
+    <div class="order-bill-con">
+      <p>商品总价<span id="orderPri">￥0.00</span></p>
+      <p>运费<span id="orderFare">￥0.00</span></p>
+      <p class="payInfo" style="display: none;">工银订单号<span id="bankOrderId"></span></p>
+      <p class="payInfo" style="display: none;">电子券抵扣<span id="ecouponAmt">￥0.00</span></p>
+      <p class="payInfo" style="display: none;">消费立减<span id="bankDiscAmt">￥0.00</span></p>
+      <p class="payInfo" style="display: none;">积分抵扣<span id="pointAmt">￥0.00</span></p>
+      <p class="payInfo fqAmt" style="display: none;">分期<span id="fqAmt">￥0.00</span></p>
+      <!--<p>税费<span id="orderDuty">￥0.00</span></p>-->
+    </div>
+    <!-- 操作按钮信息 -->
+    <div class="order-bill-btn" id="orderBillBtns"></div>
+  </div>
+</div>
+<!-- 取消订单原因 -->
+<div id="J_iuserDistrict" class="cancel_reason">
+  <input type="hidden" id="reasonSelector_dummy" value="" class="" placeholder="取消原因" readonly="" style="opacity: 0">
+  <ul id="reasonSelector"></ul>
+</div>
+
+<!-- JS -->
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+  <script type="text/javascript" src="/assets/hybrid_app.js"></script>
+  <script type="text/javascript" src="/assets/common.js"></script>
+<!-- 测试 orderDetail.js 完毕后补充加 https://xs-img.xsbuy.cn 前缀-->
+<script type="text/javascript" src="/assets/orderDetail.js"></script>
+<script type="text/javascript" src="/assets/mobiscroll.custom-2.17.0.min.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+
+</body></html>

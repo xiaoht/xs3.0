@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>超品日</title>
+	<link rel="stylesheet" type="text/css" href="/assets/lib.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/iconfont/iconfont.css">
+	<style>
+		html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+			margin: 0;
+			padding: 0;
+		}
+		*{box-sizing: border-box;}
+		html, body {
+			min-height: 100%;
+			background-color: #1E117A;
+		}
+		body {
+			font-size:14px;
+			color:#333;
+		}
+		img {
+			border: none;
+			vertical-align: middle;
+			max-width: 100%;
+		}
+		a {
+			text-decoration: none;
+			color: #232323;
+		}
+		.fl {
+			float: left
+		}
+		.fr {
+			float: right
+		}
+		.head,.coupons{
+			width: 100%;
+			font-size: 0;
+		}
+		.head img:nth-child(2){
+			margin-top: -1px;
+		}
+		.c_top:after,.c_bottom:after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+		.w50{
+			width: 50%;
+		}
+		.c_float{
+			position: fixed;
+			display: none;
+			margin-top: 100px;
+		}
+		.nav-menu {
+			z-index: 50;
+		}
+
+		.nav-menu .tab-list-nav {
+			width: 100%;
+			text-align: center;
+		}
+
+		.nav-menu .tab-list-nav li {
+			display: inline-block;
+			width: 150px;
+			margin-left: 6%;
+			text-align: center;
+			line-height: 43px;
+		}
+
+		.nav-menu .tab-list-nav li:first-of-type {
+			margin-left: -12px;
+		}
+
+		.nav-menu .tab-list-nav li p {
+			display: inline-block;
+			padding: 0 13px;
+			font-size: 16px;
+			color: #3e3e3e;
+		}
+
+		.nav-menu .tab-list-nav li.active p {
+			color: #e42f46;
+		}
+	</style>
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="nav-bar">
+	<div class="nav-menu">
+		<a href="javascript:void(0);" class="iconfont icon-back icon-chevron-thin-left" id="backapp"></a>
+		<ul class="tab-list-nav">
+			<li class="active">
+				<p>华为超品日</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<div><img src="../../../img/discounts/100.png" class="c_float" id="float"></div>
+<div class="head">
+	<img src="../../../img/discounts/HUAWEI_01.jpg" alt="">
+	<img src="../../../img/discounts/HUAWEI_02.jpg" alt="">
+</div>
+<div class="coupons">
+	<div class="c_top">
+		<img data-coupon-name="进店红包100元" data-coupon-id="100" class="fl w50 coupon" src="../../../img/discounts/HUAWEI_03.jpg" alt="">
+		<img data-coupon-name="300元红包" data-coupon-id="300" class="fr w50 coupon" src="../../../img/discounts/HUAWEI_04.jpg" alt="">
+	</div>
+	<div class="c_bottom">
+		<img data-coupon-name="500元红包" data-coupon-id="500" class="fl w50 coupon" src="../../../img/discounts/HUAWEI_05.jpg" alt="">
+		<a href="https://mims.icbc.com.cn/IMServiceServer/servlet/ICBCBaseReqNSServlet?dse_operationName=ApplyCreditCardOp&coreCode=HZDW000038467&paraPromoCode=IN0004600000000ES01"><img class="fr w50" src="../../../img/discounts/HUAWEI_06.jpg" alt=""></a>
+	</div>
+</div>
+<div class="super_prod">
+	<a href="https://m.xsbuy.cn/modules/views/commodity/mskill.html"><img src="../../../img/discounts/HUAWEI_33.jpg" alt=""></a>
+</div>
+<div class="detonation_prod">
+	<img src="../../../img/discounts/HUAWEI_09.jpg" alt="">
+	<div class="products">
+		<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=13&mine=mine"><img src="../../../img/discounts/HUAWEI_10.jpg" alt=""></a>
+		<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=5&mine=mine"><img src="../../../img/discounts/HUAWEI_11.jpg" alt=""></a>
+		<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=10&mine=mine"><img src="../../../img/discounts/HUAWEI_12.jpg" alt=""></a>
+		<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=33&mine=mine"><img src="../../../img/discounts/HUAWEI_13.jpg" alt=""></a>
+	</div>
+</div>
+<div class="selling_prod">
+	<img src="../../../img/discounts/HUAWEI_14.jpg" alt="">
+	<div class="products">
+		<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=2&mine=mine"><img src="../../../img/discounts/HUAWEI_15.jpg" alt=""></a>
+		<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=6&mine=mine"><img src="../../../img/discounts/HUAWEI_16.jpg" alt=""></a>
+	</div>
+</div>
+<div class="new_prod">
+	<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=62&mine=mine"><img src="../../../img/discounts/HUAWEI_17.jpg" alt=""></a>
+	<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=1&mine=mine"><img src="../../../img/discounts/HUAWEI_18.jpg" alt=""></a>
+	<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=1&mine=mine"><img src="../../../img/discounts/HUAWEI_19.jpg" alt=""></a>
+	<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=59&mine=mine"><img src="../../../img/discounts/HUAWEI_20.jpg" alt=""></a>
+	<div class="products">
+		<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=4&mine=mine"><img class="fl w50" src="../../../img/discounts/HUAWEI_21.jpg" alt=""></a>
+		<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=3&mine=mine"><img class="fr w50" src="../../../img/discounts/HUAWEI_22.jpg" alt=""></a>
+	</div>
+	<div class="products">
+		<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=43&mine=mine"><img class="fl w50" src="../../../img/discounts/HUAWEI_23.jpg" alt=""></a>
+		<a href="https://m.xsbuy.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=38&mine=mine"><img class="fr w50" src="../../../img/discounts/HUAWEI_24.jpg" alt=""></a>
+	</div>
+</div>
+<div class="super_prod">
+	<img src="../../../img/discounts/HUAWEI_25.jpg" alt="">
+	<div class="products">
+		<a href="https://dj.xsbuy.cn"><img class="fl w50" src="../../../img/discounts/HUAWEI_26.jpg" alt=""></a>
+		<a href="https://yp.xsbuy.cn"><img class="fr w50" src="../../../img/discounts/HUAWEI_27.jpg" alt=""></a>
+	</div>
+	<div class="products">
+		<a href="https://yp.xsbuy.cn"><img class="fl w50"  src="../../../img/discounts/HUAWEI_28.jpg" alt=""></a>
+		<a href="https://yp.xsbuy.cn"><img class="fr w50"  src="../../../img/discounts/HUAWEI_29.jpg" alt=""></a>
+	</div>
+</div>
+<div class="tips">
+	<img src="../../../img/discounts/HUAWEI_30.jpg" alt="">
+</div>
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/assets/hybrid_app.js"></script>
+<script type="text/javascript" src="/assets/common.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+<script>
+	$(function () {
+        var getCouponApi = 'v1/coupon/get-coupon-code';
+        var paramDic = getUrlString();
+        var user_id = paramDic["user_id"];
+        var token = paramDic["token"];
+        var float = document.getElementById("float");
+        var back = document.getElementById("backapp");
+        var type = paramDic["type"];
+        // 原生返回
+        back.onclick = function () {
+            /*if (type == "ios") {
+                window.location.href = "ios://back";
+            } else if (type == "Android") {
+                JSkit.back();
+            } else {
+                window.history.back();
+            }*/
+            window.location.href='/#/home';
+        };
+        $(".coupon").click(function () {
+            if (user_id != undefined && token != undefined){
+                var coupon_name = $(this).attr('data-coupon-name');
+                var coupon_id = $(this).attr('data-coupon-id');
+                var urlHeader = ajaxLink + getCouponApi;
+                var dataParam;
+                dataParam = "user_id="+user_id+"&token="+token+"&coupon_name="+coupon_name;
+                //成功后执行的方法
+                function sucGetOrderSub(response) {
+                    if(response.ret == 0 && response.data.code !=''){
+                        float.src="../../../img/discounts/"+coupon_id+".png";
+                        float.style.display="block";
+                    }else if(response.ret == 0 && response.data.code ==''){
+                        float.src="../../../img/discounts/no_coupon.png";
+                        float.style.display="block";
+                    }else{
+                        errorToken();
+                    }
+                }
+                ajaxWithHeader(urlHeader, dataParam, sucGetOrderSub,'POST');
+            }else{
+                errorToken();
+            }
+        })
+
+        $('#float').click(function () {
+            $(this).hide();
+            //window.location.href='/#/home';
+        })
+    })
+</script>
+</body>
+</html>

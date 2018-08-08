@@ -1,0 +1,99 @@
+<!--分类-->
+<ion-view view-title="HUAWEI产品专区"  has-header="true" hide-nav-bar="true" cache-view="false">
+
+    <div ng-show="!query.isShowSearch" class="has-tabs">
+
+        <ion-header-bar class="bar bar-header item-input-inset commodity-category-header">
+            <button class="button icon ion-ios-arrow-left button-clear" ng-click="headerGoHome();"></button>
+            <h1 class="h1 title">分类</h1>
+            <button class="button icon button-clear" ng-click="phone();">
+                <img src="img/phone.png" class="header-phone">
+            </button>
+        </ion-header-bar>
+
+        <ion-content scrollbar-y="false" scroll="false">
+
+            <div class="row commodity-category-row" ng-if="!networkError">
+                <div class="col col-22 commodity-category-left-col">
+                    <ion-scroll id="category-first-type" class="category_height" delegate-handle="left">
+                        <ul class="list" ng-style="leftScrollHeight">
+                            <li class="item commodity-category-item commodity-category-li"
+                                ng-repeat="firstItem in fistTypeList"
+                                ng-class="{true:'commodity-category-activated-li'}[firstItem.category_id==selectedLi]"
+                                ng-init="firstIndex = $index"
+                                ng-click="getSecondTypeList(firstItem.category_id);">
+<span class="commodity-category-activated-li-span">&nbsp;</span>
+                                {{firstItem.category_name}}
+                            </li>
+                        </ul>
+                    </ion-scroll>
+                </div>
+                <div class="col col-78 commodity-category-right-col light-bg">
+                    <ion-scroll class="category_height" delegate-handle="right" scroll="true">
+                        <div ng-style="">
+                            <!-- <div class="commodity-category-st-div" ng-repeat="secondTypeData in secondTypeData" ng-init="secondIndex = $index"> -->
+                            <div class="commodity-category-st-div" >
+                                <!--<li class="item commodity-category-second-level-title ding-ellipsis">-->
+                                    <!--<span class="commodity-category-title-span" ng-bind="secondTypeData.second_level_name"></span>-->
+
+                                <!--</li>-->
+
+                                <div class="list">
+
+                                    <!-- <div ng-repeat="item in secondTypeData" ng-init="threeIndex = $index"> -->
+                            <!--             <div class="commodity-right-item ding-ellipsis"
+                                             ng-style="item.isShow"
+                                             ng-bind="item.three_level_name">
+                                        </div> -->
+                                        <!-- <div ng-repeat="goods in item.goodsList" class="category-goods" ng-click="goDetail(goods)"> -->
+                                      <div ng-repeat="goods in secondTypeData" class="category-goods" ng-click="goDetail(goods)">
+                                            <div class="category-goods-img"><img ng-src="{{goods.goods_image}}"></div>
+                                            <div class="category-goods-name">{{goods.goods_name}}</div>
+                                        </div>
+                                    <!-- </div> -->
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </ion-scroll>
+                </div>
+            </div>
+        </ion-content>
+    </div>
+
+    <!-- 底部-->
+    <ion-footer-bar class="padding-0 htwins-tabs " ng-controller="footerController">
+        <div class="htwins-tabs">
+            <div class="htwins-tabs-div" ui-sref="home" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-index-off.png">
+                </div>
+                <span class="color-black-3">首页</span>
+            </div>
+            <div class="htwins-tabs-div">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-product-on.png">
+                </div>
+                <span class="color-red">分类</span>
+            </div>
+            <div class="htwins-tabs-div" ng-click="goToShoppingCart()" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <div ng-if="shopCar.goodsCount > 0">
+                        <label class="message-badge maker-mine-shopCar-badge" ng-bind="shopCar.goodsCount"></label>
+                    </div>
+                    <img src="img/tab-car-off.png" class="position-r">
+                </div>
+                <span class="color-black-3">购物车</span>
+            </div>
+            <div class="htwins-tabs-div" ui-sref="mine" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-mine-off.png">
+                </div>
+                <span class="color-black-3">我的</span>
+            </div>
+        </div>
+    </ion-footer-bar>
+
+
+</ion-view>

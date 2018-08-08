@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0132)https://ghesh.imoba.com.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=K7CSMdtj_-yPiPXMdKjoXrPRJYPznRef1qLGEANNHMo&mine=mine -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <!-- 清缓存 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 禁止手动缩放 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- UC强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <!-- 添加到主屏幕后全屏 -->
+    <meta name="wap-font-scale" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 全屏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>商品详情</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="/assets/lib.css">
+    <link rel="stylesheet" type="text/css" href="/assets/idangerous.swiper.css">
+    <link rel="stylesheet" type="text/css" href="/assets/goodslist.css">
+<!--     <link rel="stylesheet" type="text/css" href="/assets/fonts.css"> -->
+    <link rel="stylesheet" type="text/css" href="/assets/goodsDetails.css">
+    <link href="/assets/photoswipe.css" rel="stylesheet">
+    <link href="/assets/default-skin.css" rel="stylesheet">
+    <!-- <link href="../resources/css/goods/photo_swipe.css" type="text/css" rel="stylesheet"> -->
+   <!--  <link href="/assets/ionic.min.css" rel="stylesheet">   -->
+   <link rel="stylesheet" type="text/css" href="/fonts/iconfont/iconfont.css">
+    <style type="text/css">
+        .img-list {
+            position:postive;
+            width:100%;
+            overflow-x:hidden;
+        }
+        .img-list img{
+            display: block;
+            width: 100% !important;
+        }
+        .icon-box .cart-icon{
+            margin:auto;
+        }
+        .seckill-gray{
+            background-color: #bdc3c7 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-menu">
+            <a href="javascript:void(0);" class="iconfont icon-back icon-chevron-thin-left" id="backapp"></a>
+            <ul class="tab-list-nav">
+                <li class="active">
+                    <p>商品</p>
+                </li>
+                <li>
+                    <p>详情</p>
+                </li>
+                <!--<li><p>评价</p></li>-->
+                <div class="phone"><img src="/assets/phone.png"></div>
+                <p class="clear"></p>
+            </ul>
+            <!--<p class="tab-line-nav"><i class="icon-triangle-up"></i></p>-->
+<!--             <span class="icon-icon_share goodsDetails_icon-icon_share" id="share"></span> -->
+        </div>
+    </div>
+    <!-- 正文 -->
+    <div class="wrapper">
+        <div class="wrap-goods" id="wrapGoods">
+            <!-- 轮播图 -->
+            <div class="banner" style="height: 411px;">
+                <!--<div class="banner-logo" id="bannerLogo" style="display:none;"></div>-->
+                <div class="swiper-container" id="goodsImgs"></div>
+                <div class="pagination"><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span></div>
+            </div>
+            <div id="wrapDetailsShow" style="">
+                <!-- 抢购中 -->
+                <div class="rushbuy" id="rushbuyInfo" style="display: none;"></div>
+                <!-- 商品详情缩略 -->
+                <div class="detail-thumb" style="margin-top: 0;">
+                    <div class="priceinfo" id="priceInfo"><p class="curr-price">￥0.00-￥0.00</p></div>
+                    <div class="detailsinfo" id="detailsInfo" style="border-bottom: none;"><h2 class="detailsinfo-tit"> </h2><p class="detailsinfo-con"></p><div><div class="left left-con"><span class="word03 m-l-6" id="nation">品牌</span><span class="word03 m-l-6" id="warehouse" data-houseid="50">方正直邮</span></div><div class="right tariffinfo" id="tariffInfo"><span class="word03 m-r-3 underline">税费</span><i class="word03 icon-icon_Info2"></i></div><p class="clear"></p></div></div>
+                    
+                    
+                </div>
+                <!-- 商品已下架 -->
+                <div class="goods-shelves" style="display: none;" id="goodsShelves">
+                    <span class="goods-shelves-line"></span>
+                    <span class="goods-shelves-txt">商品已下架</span>
+                </div>
+                <!-- 评价列表缩略 -->
+                <!--<div class="eva-thumb">-->
+                <!--<div class="eva-tit" id="evaTit"></div>-->
+                <!--<ul class="eva-list" id="evaListUd"></ul>-->
+                <!--<p class="eva-list-empty" style="display:none;">暂时没有评价</p>-->
+                <!--</div>-->
+                <!-- 品牌说明缩略 -->
+                <!--<div class="brandinfo-thumb" id="brandinfoThumb"></div>-->
+                <!-- 方正推荐 -->
+                <div class="list-bot">
+                    <!--<div class="list-bot-tit">-->
+                    <!--<span class="list-bot-tit-line"></span>-->
+                    <!--<span class="list-bot-tit-txt">方正推荐</span>-->
+                    <!--</div>-->
+                    <div class="goods-list-box" id="recommendid">
+                        <p class="clear"></p>
+                    </div>
+                </div>
+                <div class="drop" id="drop" style="display:none;">
+                    <p>下拉查看图文详情</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapShow" style="">
+        <!--商品详情-->
+        <div class="wrapper gd-details" id="gDetails">
+            <div class="wrap-details-tit">
+                <ul class="tab-list">
+                    <li class="active" style="width: 0px;">
+                        <a href="javascript:void(0)">
+                            <div>商品介绍</div>
+                        </a>
+                    </li>
+                    <li style="width: 0px;">
+                        <a href="javascript:void(0)">
+                            <div>规格参数</div>
+                        </a>
+                    </li>
+                    <li style="width: 0px;">
+                        <a href="javascript:void(0)">
+                            <div>服务说明</div>
+                        </a>
+                    </li>
+                    <p class="clear"></p>
+                </ul>
+            </div>
+            <div class="wrap-details">
+                <div class="details-introduction">
+                    <div class="details-introduction-img" id="introduceImgs"></div>
+                    <!-- 猜你喜欢 -->
+                    <!--<div class="list-bot">-->
+                    <!--<div class="list-bot-tit">-->
+                    <!--<span class="list-bot-tit-line"></span>-->
+                    <!--<span class="list-bot-tit-txt">猜你喜欢</span>-->
+                    <!--</div>-->
+                    <!--<div class="goods-list-box" id="redGuessid">-->
+                    <!--<p class="clear"></p>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                </div>
+                <div class="details-standard" style="display: none;">
+                    <div class="details-standard-wrap">
+                        <table id="detailsStandardWrap"></table>
+                    </div>
+                </div>
+                <div class="details-service" id="detailsService" style="display: none;"></div>
+            </div>
+        </div>
+        <!--底部tab栏-->
+        <footer class="action-btm" id="actionBtm" style="">
+            <div class="icon-box">
+                <div class="cart-icon" id="goShopcart">
+                    <div><i class="iconfont icon-cart8e icon-sidebar_icon_shoppingcart" style="font-size: 28px; margin-top: 2px; font-weight: 100;"></i>购物车<i class="cartnum" style="display: none;"></i></div>
+                </div>
+<!--                 <div class="collect" id="collectThu">
+                    <div><i class="icon-heart"></i>收藏</div>
+                </div> -->
+            </div>
+
+            
+            <div class="buy-box">
+                <div class="shop-cart ">加入购物车</div>
+                <div class="buy-btn ">立即购买</div>
+            </div>
+        </footer>
+        <!--产品规格选项-->
+        <div class="viewport-wrap" id="viewportWrap">
+            <div class="viewport" id="viewPort">
+                <div class="viewport-t">
+                    <span><i class="icon-progressicon_defeated goods-detail-close">x</i></span>
+                    <ul class="dgsc-ul" id="dgscDetails"><div class="clear"></div></ul>
+                    <div class="dgsc-pr" id="goodsStand"><div class="dgscp-c" data-standid="100"><h2>内存</h2><ul class="dgsc-pc"><div class="clear"></div></ul></div><div class="dgscp-c" data-standid="99"><h2>颜色</h2><ul class="dgsc-pc"><div class="clear"></div></ul></div></div>
+                    <div class="dgsc-num">
+                        <h2>数量</h2>
+                        <div class="select">
+                            <div class="minus disable">-</div>
+                            <div class="act-sum">
+                                <input type="text" name="sum" value="1" readonly="">
+                            </div>
+                            <div class="plus">+</div>
+                        </div>
+                    </div>
+                    <!-- 分期 -->
+                    <div class="dgsc-fq">
+                        <h2>选择分期</h2>
+                        <ul>
+                            <li>不分期</li>
+                        </ul>
+                    </div>
+                    <!--<div class="dgsc-tips" style="display: none;">-->
+                    <!--<p>海关规定购买多件的总价不能超过1000，请分多次购买</p>-->
+                    <!--</div>-->
+                </div>
+                <div class="dgsc-btn" id="dgscBtn">确认</div>
+            </div>
+        </div>
+        <!--<div class="wrapper" id="gd-evaluate" style="display:none;">-->
+        <!--<div class="wrap-evaluate gallery">-->
+        <!--&lt;!&ndash; 评价列表 &ndash;&gt;-->
+        <!--<div class="evalist-tit" id="evalistTit">-->
+        <!--<p class="active">全部<br><span></span></p>-->
+        <!--<p>好评<br><span></span></p>-->
+        <!--<p>中评<br><span></span></p>-->
+        <!--<p>差评<br><span></span></p>-->
+        <!--<p>有图<br><span></span></p>-->
+        <!--<div class="clear"></div>-->
+        <!--</div>-->
+        <!--<ul class="eva-list" id="evaList"></ul>-->
+        <!--<p class="eva-empty" style="display:none;">暂时没有评价</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!-- 评价图片大图展示 -->
+        <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close icon-chevron-thin-left" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                        <div class="pswp__preloader">
+                        </div>
+                    </div>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- JS -->
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/assets/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="/assets/hybrid_app.js"></script>
+<script type="text/javascript" src="/assets/common.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+<script type="text/javascript" src="/assets/methodList.js"></script>
+<script type="text/javascript" src="/assets/goodsDetails.js"></script>
+<script src="/assets/photoswipe.min.js"></script>
+<script src="/assets/photoswipe-ui-default.min.js"></script>
+<script src="/assets/snf1yod.js"></script>
+<script src="/assets/photo_swipe.js"></script>
+<!-- <script type="text/javascript" src="../resources/js/goods/klass.min.js"></script> -->
+<!-- <script type="text/javascript" src="../resources/js/goods/code.photoswipe-3.0.5.js"></script> -->
+<!-- <script type="text/javascript" src="../resources/js/goods/jquery.transit.js"></script> -->
+<!-- <script type="text/javascript" src="../resources/js/goods/hammer.js"></script> -->
+<!-- <script type="text/javascript" src="../resources/js/goods/jquery.hammer.js"></script> -->
+
+<div class="m-gotop-wrap"><div class="ic-gotop"><img src="/assets/arrow003.png"></div></div></body></html>

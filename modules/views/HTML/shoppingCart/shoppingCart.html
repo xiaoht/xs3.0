@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+  <meta http-equiv="expires" content="0"> <!-- 清缓存 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- 禁止手动缩放 -->
+  <meta name="screen-orientation" content="portrait"> <!-- UC强制竖屏 -->
+  <meta name="x5-orientation" content="portrait"> <!-- QQ强制竖屏 -->
+  <meta name="apple-touch-fullscreen" content="yes"> <!-- 添加到主屏幕后全屏 -->
+  <meta name="wap-font-scale" content="no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes"> <!-- 全屏 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv="pragram" content="no-cache">
+  <title>购物车</title>
+  <!-- css -->
+<!-- <link rel="stylesheet" type="text/css" href="/assets/fonts.css"> -->
+  <link rel="stylesheet" type="text/css" href="/assets/lib.css">
+  <link rel="stylesheet" type="text/css" href="/assets/goodslist.css">
+  
+  <link href="/assets/ionic.min.css" rel="stylesheet">  
+  <link rel="stylesheet" type="text/css" href="/assets/shoppingCart.css">
+  <style type="text/css">
+    h1{
+      margin-top: 0 !important;
+    }
+  </style>
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="nav-bar">
+  <div class="nav-menu">
+    <a href="javascript:void(0);" class="ion-ios-arrow-back icon-chevron-thin-left" id="backapp"></a>
+    <h1 class="nav-tit" id="shopNum">购物车(0)</h1>
+    <span class="nav-edit" id="navEdit" onclick="shopEdit();" style="display: none;">编辑</span>
+  </div>
+</div>
+
+<!-- 正文 -->
+<div class="wrapper">
+  <!-- 购物车不为空 -->
+  <div id="notEmptyCart" style="display: none;">
+    <!-- 购物车 -->
+    <div class="shop-group" id="shopGrup"></div>
+
+    <div class="shop-invalid" id="shopInvalid"></div>
+
+    <!-- 底部tab栏 -->
+    <div class="tab-bot">
+      <div class="tab-left">
+        <div class="tab-allcheck">
+ <!--          <input type="checkbox" class="check-all" id="checkAll">
+          <span class="tab-txt">全选</span> -->
+        </div>
+        <div class="tab-alldelete" style="display:none;">
+          <i class="icon-icon_delete"></i>
+          <span class="tab-txt">清空购物车</span>
+        </div>
+      </div>
+      <div class="tab-right">
+        <div class="tab-right-but gray" id="shopSubmit">
+          <p>结算 (<span id="totalNum"></span>)</p>
+        </div>
+        <div class="tab-right-con">
+          <p>总计：<span class="int" id="total">￥</span></p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 购物车为空 -->
+  <div id="emptyCart" style="display: none;">
+    <p class="shopgo-login" id="shopgoLogin" style="display:none;"><span>登录</span>登录后查看购物车中的商品</p>
+    <div class="cart-empty">
+      <img class="emptyCart" src="/assets/gouwuche_kong.png">
+      <p>购物车没有商品哦～</p>
+      <!--<a href="javascript:void(0);">看看手机限时购<i class="icon-chevron-thin-right"></i></a>-->
+    </div>
+    <div class="emptycart-li">
+      <div class="list-bot-tit">
+        <div class="list-bot-tit-line">&nbsp;</div>
+        <div class="list-bot-tit-txt">热门推荐</div>
+      </div>
+      <div class="goods-list-box" id="guessid"><p class="clear"></p></div>
+    </div>
+  </div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+<div class="msg-loading" id="msgLoadOver"><div class="loading"><img src="/assets/loading.png"></div></div>
+  <script type="text/javascript" src="/assets/hybrid_app.js"></script>
+  <script type="text/javascript" src="/assets/common.js"></script>
+<script type="text/javascript" src="/assets/shoppingCart.js"></script>
+<script type="text/javascript" src="/assets/iscroll-pull-loading.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+
+</body><iframe src="/assets/__BRIDGE_LOADED__.html" style="display: none;"></iframe></html>

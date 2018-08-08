@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0"> <!-- 清缓存 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- 禁止手动缩放 -->
+    <meta name="screen-orientation" content="portrait"> <!-- UC强制竖屏 -->
+    <meta name="x5-orientation" content="portrait"> <!-- QQ强制竖屏 -->
+    <meta name="apple-touch-fullscreen" content="yes"> <!-- 添加到主屏幕后全屏 -->
+    <meta name="wap-font-scale" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- 全屏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>选择收货地址</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="/assets/lib.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/assets/order_addr.css">
+    <link href="/assets/ionic.min.css" rel="stylesheet">  
+    <style type="text/css">
+         h1{
+           margin-top: 0 !important;
+         }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-menu">
+            <a href="javascript:void(0);" class="ion-ios-arrow-back  icon-chevron-thin-left" id="backapp"></a>
+            <h1 class="nav-tit">选择收货地址</h1>
+        </div>
+    </div>
+    <!-- 收货地址不为空 -->
+    <div class="addr-box" id="addrBox"></div>
+    <!-- 收货地址为空 -->
+    <div class="addr-box-empty" id="addrEmpty" style="display: none;">您还没有添加任何收货地址哦~点击管理收货地址新建吧~</div>
+    <!-- 底部按钮 -->
+    <footer>
+        <div class="new-btn">管理收货地址</div>
+    </footer>
+
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+  <script type="text/javascript" src="/assets/hybrid_app.js"></script>
+  <script type="text/javascript" src="/assets/common.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+<script type="text/javascript" src="/assets/orderAddr_orderSub.js"></script>
+</body></html>

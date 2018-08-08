@@ -1,0 +1,312 @@
+Uri: https://ghesh.imoba.com.cn/
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\index.htm
+Content Type: text/html
+
+Uri: https://ghesh.imoba.com.cn/lib/ionic/css/ionic.min.css
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\lib\ionic\css\ionic.min.css
+Content Type: text/css
+
+Uri: https://ghesh.imoba.com.cn/css/style.css
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\css\style.css
+Content Type: text/css
+
+Uri: https://ghesh.imoba.com.cn/css/activeList.css
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\css\activeList.css
+Content Type: text/css
+
+Uri: https://ghesh.imoba.com.cn/modules/views/HTML/resources/js/common/common.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\views\HTML\resources\js\common\common.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/js/hybrid_app.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\js\hybrid_app.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/views/HTML/resources/js/ajax/ajax.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\views\HTML\resources\js\ajax\ajax.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/views/HTML/resources/js/ajax/b64_hmac_sha1.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\views\HTML\resources\js\ajax\b64_hmac_sha1.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/js/ngIOS9UIWebViewPatch.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\js\ngIOS9UIWebViewPatch.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/js/UUID.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\js\UUID.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/app.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\app.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/common/urlService.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\common\urlService.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/common/user.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\common\user.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/common/service.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\common\service.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/controllers/mine/mineCtrl.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\controllers\mine\mineCtrl.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/controllers/activeList/activeListController.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\controllers\activeList\activeListController.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/common/popupUtil.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\common\popupUtil.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/common/checkUtil.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\common\checkUtil.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/common/loadingUtil.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\common\loadingUtil.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/controllers/mine/personalDataCtrl.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\controllers\mine\personalDataCtrl.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/services/mine/personalDataService.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\services\mine\personalDataService.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/services/mine/myFootprintService.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\services\mine\myFootprintService.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/constants.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\constants.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/common/filters.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\common\filters.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/common/commonService.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\common\commonService.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/controllers/home/footerController.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\controllers\home\footerController.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/services/mine/bToCService.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\services\mine\bToCService.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/controllers/mine/newconllectionController.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\controllers\mine\newconllectionController.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/controllers/mine/myFootprintController.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\controllers\mine\myFootprintController.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/services/home/homeServices.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\services\home\homeServices.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/services/commodity/storeServices.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\services\commodity\storeServices.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/services/commodity/seckillServices.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\services\commodity\seckillServices.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/services/commodity/commodityServices.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\services\commodity\commodityServices.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/services/commodity/categoryServices.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\services\commodity\categoryServices.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/services/commodity/goodsListServices.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\services\commodity\goodsListServices.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/controllers/home/homeController.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\controllers\home\homeController.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/controllers/commodity/seckillController.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\controllers\commodity\seckillController.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/controllers/commodity/categoryController.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\controllers\commodity\categoryController.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/modules/services/mine/mineServices.js
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\modules\services\mine\mineServices.js
+Content Type: application/javascript
+
+Uri: https://ghesh.imoba.com.cn/lib/ionic/fonts/ionicons.eot?v=2.0.1
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\lib\ionic\fonts\ionicons.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://ghesh.imoba.com.cn/lib/ionic/fonts/ionicons.ttf?v=2.0.1
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\lib\ionic\fonts\ionicons.ttf
+Content Type: application/octet-stream
+
+Uri: https://ghesh.imoba.com.cn/lib/ionic/fonts/ionicons.woff?v=2.0.1
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\lib\ionic\fonts\ionicons.woff
+Content Type: application/font-woff
+
+Uri: https://ghesh.imoba.com.cn/lib/ionic/fonts/ionicons.woff
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\lib\ionic\fonts\ionicons-1.woff
+Content Type: application/font-woff
+
+Uri: https://ghesh.imoba.com.cn/lib/ionic/fonts/ionicons.svg?v=2.0.1
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\lib\ionic\fonts\ionicons.svg
+Content Type: image/svg+xml
+
+Uri: https://ghesh.imoba.com.cn/img/icon-back-white.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\icon-back-white.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/sanjiao.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\sanjiao.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/tab-index-off.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\tab-index-off.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/tab-index-on.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\tab-index-on.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/tab-product-off.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\tab-product-off.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/tab-product-on.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\tab-product-on.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/tab-msg-off.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\tab-msg-off.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/tab-msg-on.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\tab-msg-on.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/tab-car-off.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\tab-car-off.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/tab-car-on.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\tab-car-on.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/tab-mine-off.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\tab-mine-off.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/tab-mine-on.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\tab-mine-on.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/foot_collect_no.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\foot_collect_no.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/collect_no.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\collect_no.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/collect_off.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\collect_off.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/contact_no.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\contact_no.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/radioBtnTrue.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\radioBtnTrue.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/radioBtnFalse.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\radioBtnFalse.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/bg-mine.jpg
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\bg-mine.jpg
+Content Type: image/jpeg
+
+Uri: https://ghesh.imoba.com.cn/img/icon_appraise.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\icon_appraise.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/icon_goods_receipt.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\icon_goods_receipt.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/icon_shipments.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\icon_shipments.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/icon_pay.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\icon_pay.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/icon_all.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\icon_all.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/bg-tab.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\bg-tab.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/img_41.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\img_41.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/img_40.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\img_40.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/guagua-beijing.jpg
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\guagua-beijing.jpg
+Content Type: image/jpeg
+
+Uri: https://ghesh.imoba.com.cn/img/guagua-beijing-none.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\guagua-beijing-none.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/guagua-kapian.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\guagua-kapian.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/icon-check-red.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\icon-check-red.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/icon-check-off.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\icon-check-off.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/address-update.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\address-update.png
+Content Type: image/png
+
+Uri: https://ghesh.imoba.com.cn/img/address-delete.png
+File Name: c:\Downloaded Web Sites\ghesh.imoba.com.cn\img\address-delete.png
+Content Type: image/png
+

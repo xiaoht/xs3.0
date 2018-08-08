@@ -1,0 +1,60 @@
+<ion-view view-title="Apple产品专区" hide-nav-bar="false" hide-back-button="true">
+  <ion-nav-title>个人中心</ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button class="button icon ion-ios-arrow-left button-clear" ng-click="backButtonOnclick()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <div class="row-no-padding">
+        <div class="width-20 float-l" style="line-height: 60px">头像</div>
+          <div class="width-80 float-r text-align-r">
+            <input id="headUploadId" hidden="hidden" type="file" ng-file-model="headModel.headImg">
+            <img style="border-radius: 60px" width="60px" height="60px" ng-src="{{user.headUrl}}" ng-click="getHeadImgFile()" ng-if="imgOnchangeFlag == 0">
+            <img style="border-radius: 60px" width="60px" height="60px" ng-src="{{headModel.headImg.data}}" ng-click="getHeadImgFile()" ng-if="imgOnchangeFlag == 1">
+          </div>
+        </div>
+      </ion-item>
+      <ion-item class="item-icon-right">
+        <div class="row-no-padding">
+          <div class="width-20 float-l float-l" >用户名</div>
+          <div class="width-80 float-r text-align-r" ng-click="goChangUsername()">{{user.username}}</div>
+        </div>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+      <ion-item>
+        <div class="row-no-padding">
+          <div class="width-20 float-l">性别</div>
+          <div class="width-80 float-r text-align-r"><select><option>男</option><option>女</option></select></div>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="row-no-padding">
+          <div class="width-20 float-l">出生日期</div>
+          <div class="width-80 float-r text-align-r"><input ng-click="showDate()" ng-bind=""></div>
+        </div>
+      </ion-item>
+      <ion-item class="item-icon-right">
+        <div class="row-no-padding">
+          <div class="width-20 float-l">修改密码</div>
+          <div class="width-80 float-r text-align-r" style="height: 20px" ng-click="goChangePwd()"></div>
+        </div>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+      <ion-item class="item-icon-right">
+        <div class="row-no-padding">
+          <div class="width-20 float-l">手机绑定</div>
+          <div class="width-80 float-r text-align-r" style="height: 20px;" ng-click="goBindMobile()"></div>
+        </div>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+      <ion-item class="item-icon-right">
+        <div class="row-no-padding">
+          <div class="width-20 float-l">邮箱绑定</div>
+          <div class="width-80 float-r text-align-r" style="height: 20px" ng-click="bindMail()"></div>
+        </div>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0"> <!-- 清缓存 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- 禁止手动缩放 -->
+    <meta name="screen-orientation" content="portrait"> <!-- UC强制竖屏 -->
+    <meta name="x5-orientation" content="portrait"> <!-- QQ强制竖屏 -->
+    <meta name="apple-touch-fullscreen" content="yes"> <!-- 添加到主屏幕后全屏 -->
+    <meta name="wap-font-scale" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- 全屏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>订单支付</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="/assets/lib.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/assets/order_pay.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-menu">
+            <a href="javascript:void(0);" class="icon-chevron-thin-left" id="backapp"></a>
+            <h1 class="nav-tit">订单支付</h1>
+        </div>
+    </div>
+    <!-- 支付 -->
+    <div class="order-sum container">
+        <h2>订单金额</h2>
+        <span class="main01" id="payPrice">4899.00</span>
+    </div>
+    <div class="container pay-mode">
+        <!--<div class="weixin" id="wchartPay">-->
+            <!--<h2>微信支付</h2>-->
+            <!--<i class="icon-radio-unchecked"></i>-->
+        <!--</div>-->
+        <div class="alipay" id="alipayPay">
+            <h2>工行支付</h2>
+            <i class="icon-check-alt"></i>
+        </div>
+    </div>
+   <!-- <div class="container pay-detial" style="border-top: none;margin-bottom:0px; position: fixed; width: 100%; bottom: 49px;background-color: #f8f8f8;">
+        <ul>
+            <li><h2 style=" color: #e42f46;">*双十二打call活动200元以上面额优惠金额在支付订单时可见</h2></li>
+        </ul>
+    </div>-->
+    <footer class="pay-btn" id="orderPay">去支付</footer>
+    <input type="hidden" id="orderPayvalue" value="1">
+
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+  <script type="text/javascript" src="/assets/hybrid_app.js"></script>
+  <script type="text/javascript" src="/assets/common.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+<script type="text/javascript" src="/assets/orderPay.js"></script>
+</body></html>

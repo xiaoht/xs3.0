@@ -1,0 +1,292 @@
+<!--首页-->
+<ion-view hide-nav-bar="true" view-title="Apple产品专区" cache-view="false">
+    <style  type="text/css">
+        .home-channel{
+            border-bottom: 2px solid rgba(228,47,70,0.80) !important;
+            color:#D85D60;
+        }
+    </style>
+
+    <ion-header-bar class="bar bar-header item-input-inset commodity-category-header">
+        <button class="button icon ion-ios-arrow-left button-clear" ng-click="headerClose();"></button>
+        <h1 class="h1 title">Apple产品专区</h1>
+        <button class="button icon button-clear" ng-click="phone();">
+            <img src="img/phone.png" class="header-phone">
+        </button>
+    </ion-header-bar>
+
+    <ion-content style="bottom: 50px">
+
+        <ion-slide-box class="home-slide" ng-class="{true:'showPager'}[showPager]"
+                       delegate-handle="slideboximgs" does-continue="true" auto-play="true">
+            <ion-slide ng-repeat="img in imglist">
+                <div><img ng-src="{{img.img_url}}" ng-click="goActive(img)" ng-style="screenWidthStyle" style=""></div>
+            </ion-slide>
+        </ion-slide-box>
+        <div class="home-cat">
+            <div  class="home-cat-item" ng-repeat="item in columns" ng-click="goCategory(item.column_id)">
+                <img ng-src="img/{{item.column_name}}.png">
+                <span>{{item.column_name}}</span>
+            </div>
+
+        </div>
+       <!-- <div class="home-activity">-->
+            <!--<a href="/modules/views/HTML/activity/ac-jifen.html">-->
+            <!--<a href="/modules/views/HTML/coupon/coupon_get.html">
+            <img src="img/youhui.jpg" class="home-activity-youhuiquan">
+            </a>
+
+        </div>-->
+        <div class="home-activity-title">
+            <img src="img/jchd.png">
+        </div>
+        <div class="home-activity">
+            <a href="/modules/views/HTML/goods/goodsDetails.html?goods_id=H1TBIpPwCId9XmYWsigHV1izAuEkNJlNfjSNu5XCl4I">
+                <img src="/img/action/twentyFourActivity/ipad.jpg">
+            </a>
+            <!-- <a href="/modules/views/HTML/goods/goodsDetails.html?goods_id=lWEqFXKKagrkVlhxCB5Ca9zxjzG5dx-HqZKxIyVura8&mine=mine">
+                <img src="/img/action/893974578268485934.jpg">
+            </a> -->
+            <!--<a href="/modules/views/HTML/activity/valentineActivity.html?mine=mine">
+                <img src="/img/action/valentineActivity/index.jpg">
+            </a>-->
+            <!-- <img src="/img/mainpageindex.jpg"> -->
+
+        </div>
+
+    </div>
+
+        <div style="background-color: white;display: table;margin: 10px;">
+
+            <div ng-repeat="goods in homeReocmmendList" class="col-50" style="padding:15px;float: left;background: white;border-bottom: 1px solid #f5f5f5; border-right: 1px solid #f5f5f5;position: relative;"  ng-click="toDetail(goods.goods_id)">
+                <img src="/img/activeRight.png" style="position: absolute;right: 5px;top: 0;width: 30px">
+                <div><img ng-src="{{goods.goods_img}}" style="width: 100%;"></div>
+                <div class="home-two-row-title">{{goods.goods_name}}</div>
+                <div>
+                    <span style="margin-left: 3px;color:#e42f46;font-size:14px;font-weight: 600">{{goods.goods_price | currency:"¥"}}</span>
+                    <span style="float:right;width: 45px;line-height: 15px;font-size: 12px;border:1px solid #e42f46;color:#e42f46;border-radius: 4px;text-align: center; " ng-if="goods.staging||goods.isStaging">分期</span>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="hasmore" on-infinite="doLoadMore()" distance="10%"></ion-infinite-scroll>
+    </ion-content>
+
+    <!--<ion-content scrollbar-y="false" class="has-tabs">-->
+        <!--<div>-->
+            <!--<div ng-class="{'home-model-header-div':$index==0,'home-model-middle-div':$index>0}"-->
+                 <!--ng-repeat="homeList in homeList">-->
+                <!--&lt;!&ndash;轮播广告&ndash;&gt;-->
+                <!--<div ng-if="homeList.rangeId == 'range0015'" class="home-model-div">-->
+                    <!--<ion-slide-box id="ionSlideBoxId" class="home-slide-box slide-box-pager"-->
+                                   <!--delegate-handle="homeListSlideId"-->
+                                   <!--auto-play="true"-->
+                                   <!--slide-interval="1500" does-continue="true">-->
+                        <!--<ion-slide ng-repeat="range0015List in homeList.range0015List">-->
+                            <!--<div class="box blue">-->
+                                <!--<a href="{{range0015List.adUrl}}">-->
+                                    <!--<img ng-src="{{range0015List.adPic | imagesFilter}}" style="width:{{bannerWidth}}px; height: {{bannerHeight}}px">-->
+                                <!--</a>-->
+                            <!--</div>-->
+                        <!--</ion-slide>-->
+                    <!--</ion-slide-box>-->
+                    <!--<div class="horizontal-line"></div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; 通排专场 &ndash;&gt;-->
+                <!--<div class="home-model-div" ng-if="homeList.rangeId == 'range0031'">-->
+                    <!--<div class="home-model-title ding-over-flow"-->
+                         <!--ng-click="OnSpecial(homeList.id,homeList.range0031.specialName,homeList.range0031.goodsInfoBeanList)">-->
+                        <!--<div class="home-model-vertical-line"></div>-->
+                        <!--<div class="ding-home-div-title ding-ellipsis float-l">{{homeList.range0031.specialName}}专场-->
+                        <!--</div>-->
+
+                        <!--<div class="home-model-item-arrow width-15 float-r">-->
+                            <!--<img class="float-r width-full" src="img/icon-right.png">-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="home-model-item-tong">-->
+                        <!--&lt;!&ndash;循环体&ndash;&gt;-->
+                        <!--<div class="home-tong-div" ng-repeat="goodsInfoBean in homeList.range0031.goodsInfoBeanList"-->
+                             <!--ng-click="OnDetail('{{goodsInfoBean.goodsId}}')">-->
+                            <!--<div class="home-tong-img">-->
+                                <!--<img style="width: 100px;height: 100px; max-height: 100px; min-width: 100px;"-->
+                                     <!--ng-src="{{goodsInfoBean.goodsPic | imagesFilter}}">-->
+                            <!--</div>-->
+                            <!--<div class="home-tong-gools-name ding-ellipsis">{{goodsInfoBean.goodsName}}</div>-->
+                            <!--<div class="tong-div-line"></div>-->
+                            <!--<div class="tong-div-price">-->
+                                <!--<div class="tong-div-price-red ding-ellipsis">-->
+                                    <!--{{goodsInfoBean.goodsSalesPrice | currency: '&yen'}}-->
+                                <!--</div>-->
+                                <!--<div class="tong-div-price-black ding-ellipsis">-->
+                                    <!--原价: {{goodsInfoBean.goodsMarketPrice | currency: '&yen'}}-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="horizontal-line"></div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; 单排专场  start&ndash;&gt;-->
+                <!--<div style="width: 50%;float: left;background-color: white;" ng-if="homeList.rangeId == 'range0032'">-->
+                    <!--<div class="home-special-item">-->
+                        <!--<div class="home-model-title ding-over-flow"-->
+                             <!--ng-click="toSingleChannel(homeList.id,homeList.range0032.specialName,homeList.range0032.goodsId)">-->
+                            <!--<div class="home-model-vertical-line"></div>-->
+                            <!--<div class="ding-ellipsis float-l ding-home-div-title">-->
+                                <!--{{homeList.range0032.specialName}}专场-->
+                            <!--</div>-->
+                            <!--<div class="home-model-item-arrow float-r width-15">-->
+                                <!--<img class="float-r width-full" src="img/icon-right.png">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="home-single-item-div" ng-click="OnDetail(homeList.range0032.goodsId)">-->
+                            <!--<div class="item-vertical-line"></div>-->
+                            <!--<img src="temp_img/05.png" ng-src="{{homeList.range0032.goodsPic | imagesFilter}}"-->
+                                 <!--class="home-model-item-img">-->
+
+                            <!--<div class="home-model-item-info">-->
+                                <!--<div class="home-model-item-name">-->
+                                    <!--<span>{{homeList.range0032.goodsName}}</span>-->
+                                <!--</div>-->
+                                <!--<div style="height: 1px;width: 100%"></div>-->
+                                <!--<div class="home-model-item-price">-->
+                                    <!--<span class="ding-home-ellipsis home-model-item-curr-price"-->
+                                          <!--ng-bind="homeList.range0032.goodsSalesPrice | currency : '&yen'"></span>-->
+                                    <!--<span class="ding-home-ellipsis home-model-item-orgn-price">原价：{{homeList.range0032.goodsMarketPrice | currency: '&yen'}}</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; 促销活动 &ndash;&gt;-->
+                <!--<div class="home-model-div" ng-if="homeList.rangeId == 'range0033' && homeList.range0033.activeId"-->
+                     <!--style="overflow: auto">-->
+                    <!--<div class="home-model-title"-->
+                         <!--ng-click="OnSecKill('{{homeList.range0033.activeType}}','{{homeList.range0033.activeName}}')"-->
+                         <!--style="overflow: auto">-->
+                        <!--<div class="home-model-vertical-line"></div>-->
+                        <!--<span>{{homeList.range0display: inline-block;
+    border-bottom: 2px solid red;033.activeName}}</span>-->
+
+                        <!--<div class="home-model-item-arrow">-->
+                            <!--<img class="float-r" src="img/icon-right.png">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="home-model-item">-->
+                        <!--<div ng-if="homeList.range0033.goodsName1 != null" class="home-model-item-div"-->
+                             <!--ng-click="OnDetail('{{homeList.range0033.goodsId1}}')">-->
+                            <!--<div class="item-vertical-line"></div>-->
+                            <!--<img scr="temp_img/05.png" ng-src="{{homeList.range0033.goodsPic1 | imagesFilter}}"-->
+                                 <!--class="home-model-item-img">-->
+
+                            <!--<div class="home-model-item-info">-->
+                                <!--<div class="home-model-item-name">-->
+                                    <!--<span>{{homeList.range0033.goodsName1}}</span>-->
+                                <!--</div>-->
+                                <!--<div class="horizontal-line"></div>-->
+                                <!--<div class="home-model-item-price">-->
+                                    <!--<div class="ding-home-ellipsis home-model-item-curr-price"-->
+                                         <!--ng-bind="homeList.range0033.goodsSalesPrice1 | currency : '&yen'"></div>-->
+                                    <!--<div class="ding-home-ellipsis home-model-item-orgn-price">-->
+                                        <!--原价：{{homeList.range0033.goodsMarketPrice1 | currency: '&yen'}}-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div ng-if="homeList.range0033.goodsName2 != null" class="home-model-item-div"-->
+                             <!--ng-click="OnDetail('{{homeList.range0033.goodsId2}}')">-->
+                            <!--<div class="item-vertical-line"></div>-->
+                            <!--<img scr="temp_img/05.png" ng-src="{{homeList.range0033.goodsPic2 | imagesFilter}}"-->
+                                 <!--class="home-model-item-img">-->
+
+                            <!--<div class="home-model-item-info">-->
+                                <!--<div class="home-model-item-name">-->
+                                    <!--<span>{{homeList.range0033.goodsName2}}</span>-->
+                                <!--</div>-->
+                                <!--<div class="horizontal-line"></div>-->
+                                <!--<div class="home-model-item-price">-->
+                                    <!--<div class="ding-home-ellipsis home-model-item-curr-price"-->
+                                         <!--ng-bind="homeList.range0033.goodsSalesPrice2 | currency: '&yen'"></div>-->
+                                    <!--<div class="ding-home-ellipsis home-model-item-orgn-price">-->
+                                        <!--原价：{{homeList.range0033.goodsMarketPrice2 | currency: '&yen'}}-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="horizontal-line"></div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; 优质品牌 &ndash;&gt;-->
+                <!--<div class="home-model-div" ng-if="homeList.rangeId == 'range0034'">-->
+                    <!--<div class="home-model-title">-->
+                        <!--<div class="home-model-vertical-line"></div>-->
+                        <!--<span>优质品牌</span>-->
+
+                    <!--</div>-->
+                    <!--<ion-scroll class="home-model-brand-scroll" scrollbar-x="false" direction="x">-->
+                        <!--<div style="width:{{homeList.range0034List.length*78}}px;">-->
+                            <!--<img ng-if="range0034List.storeId" ng-src="{{range0034List.storeLogo | imagesFilter}}"-->
+                                 <!--ng-click="OnStore('{{range0034List.storeId}}')"-->
+                                 <!--ng-repeat="range0034List in homeList.range0034List">-->
+                        <!--</div>-->
+                    <!--</ion-scroll>-->
+                    <!--<div class="horizontal-line"></div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash;广告栏位&ndash;&gt;-->
+                <!--<div class="home-model-div" ng-if="homeList.rangeId == 'range0035'">-->
+                    <!--<div class="width-full">-->
+
+
+                        <!--<a  ng-if="homeList.range0035"  href="{{homeList.range0035.adUrl}}">-->
+
+                            <!--<img class="width-full" ng-src="{{homeList.range0035.adPic | imagesFilter}}">-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    <!--</ion-content>-->
+
+    <!-- 底部-->
+    <ion-footer-bar class="padding-0 htwins-tabs " ng-controller="footerController">
+        <div class="htwins-tabs">
+            <div class="htwins-tabs-div">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-index-on.png">
+                </div>
+                <span class="color-red">首页</span>
+            </div>
+            <div class="htwins-tabs-div" ui-sref="category" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-product-off.png">
+                </div>
+                <span class="color-black-3">分类</span>
+            </div>
+            <div class="htwins-tabs-div"  ui-sref="active" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <div ng-if="massage.messageCount > 0">
+                        <label class="message-badge maker-mine-message-badge" ng-bind="massage.messageCount"></label>
+                    </div>
+                    <img src="img/tab-msg-off.png" class="position-r">
+                </div>
+                <span class="color-black-3">活动</span>
+            </div>
+            <div class="htwins-tabs-div" ng-click="goToShoppingCart()" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <div ng-if="shopCar.goodsCount > 0">
+                        <label class="message-badge maker-mine-shopCar-badge" ng-bind="shopCar.goodsCount"></label>
+                    </div>
+                    <img src="img/tab-car-off.png" class="position-r">
+                </div>
+                <span class="color-black-3">购物车</span>
+            </div>
+            <div class="htwins-tabs-div" ui-sref="mine" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-mine-off.png">
+                </div>
+                <span class="color-black-3">我的</span>
+            </div>
+        </div>
+    </ion-footer-bar>
+</ion-view>

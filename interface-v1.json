@@ -1,0 +1,1106 @@
+interface list:
+备注：除非特殊标注，Request主体均为FormData对象
+#############################
+#首页用户检测API
+https://ghesh.imoba.com.cn/loginApi.ajax?flag=1
+
+Request :
+{
+	loginParams: {"phone":"13099439943","currentTimeMillis":"1494466036877","cust_id":"Co1z7hV167Faqkk5WIohVdhaHj+mORib","isNewUser":"0"}
+}
+
+
+Response:
+
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "成功",
+  "data" : {
+    "user_id" : "001_7441486512002139_mem",
+    "refurbishToken" : "Z2W4WVP3RRWCBL4OBNSK5LBFNSATYIJD",
+    "accessToken" : "WZRM6FGL0NBIVL94VF3AYV1MBSWXYJOL",
+    "avatar" : "",
+    "user_name" : "u_17100813444689"
+  },
+  "success" : true
+}
+
+#############################
+#首页商品分类API
+https://ghesh.imoba.com.cn/home/get_home_columns.ajax
+Request :
+
+Response:
+
+{
+  "ret" : "0",
+  "msg" : "OK",
+  "desp" : "成功",
+  "data" : {
+    "columns" : [ {
+      "column_name" : "Mac",
+      "column_id" : "307_6407593084000420_gic"
+    }, {
+      "column_name" : "iPad",
+      "column_id" : "307_6407620418000421_gic"
+    }, {
+      "column_name" : "iPhone",
+      "column_id" : "307_6407721159000422_gic"
+    }, {
+      "column_name" : "Beats",
+      "column_id" : "307_6408441655000445_gic"
+    }, {
+      "column_name" : "Watch",
+      "column_id" : "307_6408757448000450_gic"
+    }, {
+      "column_name" : "配件",
+      "column_id" : "307_6408804481000453_gic"
+    } ]
+  },
+  "success" : true
+}
+
+#############################
+#首页商品推荐列表API
+https://ghesh.imoba.com.cn/home/get_home_recommend0.ajax
+Request :
+{
+start: 1
+}
+Response:
+{
+  "ret" : "0",
+  "msg" : "OK",
+  "desp" : "成功",
+  "data" : {
+    "goods_list" : [ {
+      "goods_id" : "IXzYWicB1-he4IKEHlXFy1Px9o761LZa5-sHu63_GA4",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/4a932d39-871e-4615-bc65-cc01a4c26333.jpg",
+      "goods_name" : "BeatsX 蓝牙无线 入耳式/运动/手机耳机/带麦可通话",
+      "goods_price" : "786.00",
+      "goods_refer_price" : "",
+      "goods_activities_price" : "",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "",
+      "item_id" : "",
+      "staging" : true
+    }, {
+      "goods_id" : "tvxCRyXLOCiL5Q7ycud4VsEAiz7-ZB7A43OHuudjD_I",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/7c8a727d-1c0d-442e-8cf9-b0921018aae2.jpg",
+      "goods_name" : "Beats urBeats2.0入耳式耳机",
+      "goods_price" : "459.00",
+      "goods_refer_price" : "",
+      "goods_activities_price" : "",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "",
+      "item_id" : "",
+      "staging" : false
+    }, {
+      "goods_id" : "H1TBIpPwCId9XmYWsigHV1izAuEkNJlNfjSNu5XCl4I",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/c736a4a4-950f-440a-9b9b-b762c984b790.jpg",
+      "goods_name" : "Apple iPad（第五代）平板电脑9.7英寸(WLAN版)",
+      "goods_price" : "2388.00",
+      "goods_refer_price" : "",
+      "goods_activities_price" : "",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "",
+      "item_id" : "",
+      "staging" : true
+    }, {
+      "goods_id" : "yixYSjJeVTPY0jZvKoHsSIukLpIDP0G3F5iBKQviS9I",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/deda0868-a4b9-4bcb-bfb4-18ddc837636b.jpg",
+      "goods_name" : "Apple Watch Series 3智能手表38毫米/GPS款",
+      "goods_price" : "2488.00",
+      "goods_refer_price" : "",
+      "goods_activities_price" : "",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "",
+      "item_id" : "",
+      "staging" : true
+    }, {
+      "goods_id" : "xh1hqCdMrLqnzQDNFTu04IJCEZZVu4bf2eNEs68nRXs",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/2716be10-3e51-4530-b940-35d9efc1914e.jpg",
+      "goods_name" : "Apple iPhone 8 Plus  64GB/256GB 移动联通电信4G手机",
+      "goods_price" : "5988.00",
+      "goods_refer_price" : "",
+      "goods_activities_price" : "",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "",
+      "item_id" : "",
+      "staging" : true
+    }, {
+      "goods_id" : "ddziWjzlviEgXvG299oL7iPU99hD9Nls-pyQiSv9vC0",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/1943c0f0-fb54-487c-aeeb-fdf14ddd0836.jpg",
+      "goods_name" : "Apple iPhone 8 64GB/256GB 移动联通电信4G手机",
+      "goods_price" : "4899.00",
+      "goods_refer_price" : "",
+      "goods_activities_price" : "",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "",
+      "item_id" : "",
+      "staging" : true
+    }, {
+      "goods_id" : "K7CSMdtj_-yPiPXMdKjoXrPRJYPznRef1qLGEANNHMo",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/7f01b3b9-ec16-4f11-a0a9-eca3bbc82db1.png",
+      "goods_name" : " Apple MacBook Air 13.3英寸笔记本电脑",
+      "goods_price" : "6388.00",
+      "goods_refer_price" : "",
+      "goods_activities_price" : "",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "",
+      "item_id" : "",
+      "staging" : true
+    }, {
+      "goods_id" : "3VuSzxzEzVKPZDEaNqLeFEMHuq2ppJJCAqPP4-Brr9I",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/b61162ff-ac1d-4875-92b5-42531c6889a5.jpg",
+      "goods_name" : "Apple AirPods 蓝牙无线耳机",
+      "goods_price" : "1088.00",
+      "goods_refer_price" : "",
+      "goods_activities_price" : "",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "",
+      "item_id" : "",
+      "staging" : true
+    } ]
+  },
+  "success" : true
+}
+#############################
+#首页幻灯片列表API
+https://ghesh.imoba.com.cn/home/get_home_carousel_figure.ajax
+
+Request :
+
+{
+column_id: 10
+
+}
+
+Response:
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "成功",
+  "data" : {
+    "image_show_time" : "5",
+    "images" : [ {
+      "img_id" : "8c5900d7-2666-11e8-b8e1-30e17154c1f8",
+      "img_url" : "//img-ghesh.imoba.com.cn/public/admin/7cb9aed1-b738-44f8-b8d7-c06d5afdbeb4.jpg",
+      "type" : "",
+      "promotion_id" : "",
+      "link" : "https://ghesh.imoba.com.cn/modules/views/HTML/activity/twentyFourActivity.html"
+    }, {
+      "img_id" : "8c58fb7b-2666-11e8-b8e1-30e17154c1f8",
+      "img_url" : "//img-ghesh.imoba.com.cn/public/admin/40e9f332-d4b1-4b23-9b8b-c7e72d12d446.jpg",
+      "type" : "",
+      "promotion_id" : "",
+      "link" : "https://ghesh.imoba.com.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=lWEqFXKKagrkVlhxCB5Ca9zxjzG5dx-HqZKxIyVura8"
+    }, {
+      "img_id" : "8c58ff81-2666-11e8-b8e1-30e17154c1f8",
+      "img_url" : "//img-ghesh.imoba.com.cn/public/admin/238132fa-2a06-45f1-a35e-6ead021071ac.jpg",
+      "type" : "",
+      "promotion_id" : "",
+      "link" : "https://ghesh.imoba.com.cn/modules/views/HTML/goods/goodsDetails.html?goods_id=0YJiHnDHPCQsu3WKivOzngfUgDF4VmL5RSpzVvv5zJA"
+    } ]
+  },
+  "success" : true
+}
+
+#############################
+#商品分类列表API：
+https://ghesh.imoba.com.cn/classify/get_first_level.ajax
+Request :
+
+Response:
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "成功",
+  "data" : {
+    "first_level_list" : [ {
+      "first_level_name" : "Mac",
+      "first_level_id" : "307_6407593084000420_gic"
+    }, {
+      "first_level_name" : "iPad",
+      "first_level_id" : "307_6407620418000421_gic"
+    }, {
+      "first_level_name" : "iPhone",
+      "first_level_id" : "307_6407721159000422_gic"
+    }, {
+      "first_level_name" : "Beats",
+      "first_level_id" : "307_6408441655000445_gic"
+    }, {
+      "first_level_name" : "Watch",
+      "first_level_id" : "307_6408757448000450_gic"
+    }, {
+      "first_level_name" : "配件",
+      "first_level_id" : "307_6408804481000453_gic"
+    } ]
+  },
+  "success" : true
+}
+#############################
+#商品分类具体信息
+https://ghesh.imoba.com.cn/classify/get_second_level.ajax
+
+Request :
+{
+	first_level_id: 307_6407593084000420_gic //商品分类的id
+}
+
+
+Response:
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "成功",
+  "data" : {
+    "classify_title" : "",
+    "second_level_list" : [ {
+      "second_level_name" : "Mac",
+      "second_level_id" : "307_6409206987000457_gic",
+      "three_level_list" : [ {
+        "three_level_name" : "Mac",
+        "three_level_id" : "307_6409233053000458_gic"
+      } ]
+    } ]
+  },
+  "success" : true
+}
+
+#############################
+#获取属于制定分类的商品列表API
+https://ghesh.imoba.com.cn/goods/search_goods.ajax
+Request :
+
+{
+input_search: *
+goods_flag: 1
+start: 0
+count: 999
+sift: [{
+		"sift_cons_name":"307_6409233053000458_gic",
+		"sift_cons_id":"mall_category3_id"
+	}]
+
+}
+
+Response:
+
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "获取商品列表成功",
+  "data" : {
+    "goods_list" : [ {
+      "goods_id" : "K7CSMdtj_-yPiPXMdKjoXrPRJYPznRef1qLGEANNHMo",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/7f01b3b9-ec16-4f11-a0a9-eca3bbc82db1.png",
+      "goods_name" : " Apple MacBook Air 13.3英寸笔记本电脑",
+      "goods_price" : "6388.00",
+      "goods_refer_price" : "6988.00",
+      "goods_activities_price" : "6388.00",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "MacBook Air 13.3英寸",
+      "item_id" : "INTR0700092601"
+    }, {
+      "goods_id" : "RdnAS3YcNzeelPVA-5Wy1aAvj_Gn4FeSltjHlHybNYQ",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/abdf1316-aba8-4c93-b808-bfd653e6ffb0.jpg",
+      "goods_name" : "Apple MacBook Pro 13.3英寸 i5/8GB内存/128G",
+      "goods_price" : "9188.00",
+      "goods_refer_price" : "10288.00",
+      "goods_activities_price" : "9188.00",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : " MacBook Pro 13.3英寸",
+      "item_id" : "INTR1600092701"
+    }, {
+      "goods_id" : "TTGmB3RN74-7AWGK_V0HrhXnE-CWG7HuTGjtgm0iHcs",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/f1a16973-eb15-47e7-8057-f411c892d43b.jpg",
+      "goods_name" : "Apple MacBook 12英寸笔记本电脑",
+      "goods_price" : "9288.00",
+      "goods_refer_price" : "10288.00",
+      "goods_activities_price" : "9288.00",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "MacBook 12.0英寸",
+      "item_id" : "INTR5100094301"
+    } ]
+  },
+  "success" : true
+}
+
+#############################
+#购物车列表API
+https://ghesh.imoba.com.cn/cart/list.ajax
+Request :
+
+{
+token: WZRM6FGL0NBIVL94VF3AYV1MBSWXYJOL
+user_id: 001_7441486512002139_mem
+
+}
+
+Response:
+{
+  "ret" : "0",
+  "msg" : "购物车列表取得为空",
+  "desp" : "购物车列表取得为空",
+  "data" : "",
+  "success" : true
+}
+
+#############################
+#购物车界面商品推荐API
+https://ghesh.imoba.com.cn/cart/get_cart_recommend.ajax
+Request :
+{
+
+count: 4
+goods_type: 0
+start: 1
+}
+
+Response:
+
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "获取苹果专区推荐成功",
+  "data" : {
+    "goods_list" : [ {
+      "goods_id" : "ddziWjzlviEgXvG299oL7iPU99hD9Nls-pyQiSv9vC0",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/1943c0f0-fb54-487c-aeeb-fdf14ddd0836.jpg",
+      "goods_name" : "Apple iPhone 8 64GB/256GB 移动联通电信4G手机",
+      "goods_price" : "4899.00",
+      "goods_refer_price" : "5888.00",
+      "goods_activities_price" : "4899.00",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "iPhone 8",
+      "item_id" : "INTR2300092201"
+    }, {
+      "goods_id" : "xh1hqCdMrLqnzQDNFTu04IJCEZZVu4bf2eNEs68nRXs",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/2716be10-3e51-4530-b940-35d9efc1914e.jpg",
+      "goods_name" : "Apple iPhone 8 Plus  64GB/256GB 移动联通电信4G手机",
+      "goods_price" : "5988.00",
+      "goods_refer_price" : "6688.00",
+      "goods_activities_price" : "5988.00",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "iPhone 8 Plus",
+      "item_id" : "INTR1800092401"
+    }, {
+      "goods_id" : "mWuwGIhns6aYWp6NhYUP3g2xXd3javbsrZlYqM1uMNs",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/37ee4240-5bb8-4daf-ab4b-183e79390e27.jpg",
+      "goods_name" : " Beats Solo3 Wireless 蓝牙耳机头戴式 无线耳机/耳麦",
+      "goods_price" : "1488.00",
+      "goods_refer_price" : "2288.00",
+      "goods_activities_price" : "1488.00",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "Beats Solo3 Wireless",
+      "item_id" : "INTR1800094199"
+    }, {
+      "goods_id" : "yixYSjJeVTPY0jZvKoHsSIukLpIDP0G3F5iBKQviS9I",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/deda0868-a4b9-4bcb-bfb4-18ddc837636b.jpg",
+      "goods_name" : "Apple Watch Series 3智能手表38毫米/GPS款",
+      "goods_price" : "2488.00",
+      "goods_refer_price" : "2588.00",
+      "goods_activities_price" : "2488.00",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "Apple Watch S3 GPS",
+      "item_id" : "INTR3700092304"
+    }, {
+      "goods_id" : "IXzYWicB1-he4IKEHlXFy1Px9o761LZa5-sHu63_GA4",
+      "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/4a932d39-871e-4615-bc65-cc01a4c26333.jpg",
+      "goods_name" : "BeatsX 蓝牙无线 入耳式/运动/手机耳机/带麦可通话",
+      "goods_price" : "786.00",
+      "goods_refer_price" : "1188.00",
+      "goods_activities_price" : "786.00",
+      "goods_label1" : "",
+      "goods_label2" : "",
+      "goods_label3" : "BeatsX",
+      "item_id" : "INTR1300092504"
+    } ]
+  },
+  "success" : true
+}
+
+#############################
+#个人中心获取用户已购买商品数量API
+https://ghesh.imoba.com.cn/order/get_order_list_num.ajax
+
+Request :
+
+{
+user_id: 001_7441486512002139_mem
+token: EWVZS26APYWNCDKBIE0LAS1QFULWNXQA
+
+}
+
+Response:
+{
+  "ret" : "0",
+  "msg" : "获取订单数目成功!",
+  "desp" : "成功",
+  "data" : {
+    "order_all_num" : "0",
+    "order_no_pay_num" : "0",
+    "order_no_hair_num" : "0",
+    "order_no_receive_num" : "0",
+    "order_no_evaluate_num" : "0"
+  },
+  "success" : true
+}
+
+#############################
+#编辑购买数量API
+https://ghesh.imoba.com.cn/cart/edit_goods_num.ajax
+Request:
+{
+  cart_id: 22356
+  goods_num: 2
+  token: HP8UI7RV2CBXVFZKC0MGSUIUG4OHVQCA
+  user_id: 001_7441486512002139_mem
+}
+
+Response:
+
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "成功",
+  "data" : "",
+  "success" : true
+}
+
+
+#############################
+#个人中心获取用户已购买商品详情列表API
+https://ghesh.imoba.com.cn/order/get_order_list.ajax
+
+Reques：
+{
+  count: 10
+  order_flag: 00  //-1=>全部订单，00=>待付款,10=>待发货，20=>待收货
+  start: 1
+  token: ENDUS6XTENO31F6B4I1JDCH8U7KVWJ2M
+  user_id: 001_7441486512002139_mem
+}
+Response：
+{
+  "ret" : "0",
+  "msg" : "获取订单列表成功!",
+  "desp" : "获取订单列表成功!",
+  "data" : [ {
+    "order_id" : "1803291541C556177",
+    "order_time" : "2018-03-29 15:41:50",
+    "order_status" : "00",
+    "order_status_code" : "待付款",
+    "order_house_list" : [ {
+      "house_id" : "50",
+      "house_name" : "方正",
+      "order_goods_list" : [ {
+        "order_detail_id" : "603_22309310038092662_sod",
+        "goods_id" : "ddziWjzlviEgXvG299oL7iPU99hD9Nls-pyQiSv9vC0",
+        "item_id" : "INTR2300092201",
+        "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/d106e169-8e9e-489c-bed8-4f2fddc57f3a.jpg",
+        "goods_name" : "Apple iPhone 8 64GB/256GB 移动联通电信4G手机内存:64GB,颜色:深空灰色",
+        "item_name" : "64GB 深空灰色 ",
+        "goods_price" : "4899.00",
+        "goods_standard" : "64GB、深空灰色",
+        "goods_num" : "1",
+        "apply_id" : "",
+        "goods_aftersale_state" : "0",
+        "goods_aftersale_code" : "当前商品不在退货/退款中"
+      } ]
+    } ],
+    "order_goods_sum" : "1",
+    "order_price" : 4899.00,
+    "goods_aftersale_state" : "0",
+    "goods_aftersale_code" : "当前订单无正在退货退款的商品",
+    "order_evalue_status" : "1",
+    "order_evalue_status_code" : "未评价",
+    "billId" : "",
+    "stages" : ""
+  }, {
+    "order_id" : "1803291540C149176",
+    "order_time" : "2018-03-29 15:40:38",
+    "order_status" : "00",
+    "order_status_code" : "待付款",
+    "order_house_list" : [ {
+      "house_id" : "50",
+      "house_name" : "方正",
+      "order_goods_list" : [ {
+        "order_detail_id" : "603_22309238473092660_sod",
+        "goods_id" : "xh1hqCdMrLqnzQDNFTu04IJCEZZVu4bf2eNEs68nRXs",
+        "item_id" : "INTR1800092404",
+        "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/1ac1afb7-cde5-4e80-ab39-7f538db97897.jpg",
+        "goods_name" : "Apple iPhone 8 Plus  64GB/256GB 移动联通电信4G手机内存:256GB,颜色:深空灰色",
+        "item_name" : "256GB 深空灰色 ",
+        "goods_price" : "7088.00",
+        "goods_standard" : "256GB、深空灰色",
+        "goods_num" : "3",
+        "apply_id" : "",
+        "goods_aftersale_state" : "0",
+        "goods_aftersale_code" : "当前商品不在退货/退款中"
+      }, {
+        "order_detail_id" : "603_22309238480092661_sod",
+        "goods_id" : "H1TBIpPwCId9XmYWsigHV1izAuEkNJlNfjSNu5XCl4I",
+        "item_id" : "INTR3400093105",
+        "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/77d93ef3-26ae-48d1-8277-1f525a42b0f3.jpg",
+        "goods_name" : "Apple iPad（第五代）9.7英寸(WLAN版)内存:128GB,颜色:深空灰色",
+        "item_name" : "128GB 深空灰色 ",
+        "goods_price" : "3188.00",
+        "goods_standard" : "128GB、深空灰色",
+        "goods_num" : "1",
+        "apply_id" : "",
+        "goods_aftersale_state" : "0",
+        "goods_aftersale_code" : "当前商品不在退货/退款中"
+      } ]
+    } ],
+    "order_goods_sum" : "4",
+    "order_price" : 24452.00,
+    "goods_aftersale_state" : "0",
+    "goods_aftersale_code" : "当前订单无正在退货退款的商品",
+    "order_evalue_status" : "1",
+    "order_evalue_status_code" : "未评价",
+    "billId" : "",
+    "stages" : ""
+  } ],
+  "success" : true
+}
+
+
+#############################
+#删除订单API
+https://ghesh.imoba.com.cn/order/delete_order.ajax
+Request:
+{
+  order_id: 1803291541C556177
+  token: S8UUGARMHV8QNQMA1NERRSRY2UVPCW5G
+  user_id: 001_7441486512002139_mem
+}
+
+Response:
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "删除订单成功",
+  "data" : "",
+  "success" : true
+}
+
+#############################
+#获取订单详情API
+https://ghesh.imoba.com.cn/order/get_order_details.ajax
+Request:
+
+{
+
+  order_id: 1803291540C149176
+  token: S8UUGARMHV8QNQMA1NERRSRY2UVPCW5G
+  user_id: 001_7441486512002139_mem
+}
+
+Response:
+
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "成功",
+  "data" : {
+    "order_id" : "1803291540C149176",
+    "order_status" : "交易关闭",
+    "order_status_code" : "30",
+    "goods_aftersale_state" : "0",
+    "goods_aftersale_code" : "当前订单无正在退货退款的商品",
+    "order_evalue_status" : "1",
+    "order_evalue_status_code" : "未评价",
+    "order_logistic_status" : "暂无物流信息",
+    "order_logistic_time" : "",
+    "order_pay_price" : "24452.00",
+    "order_pay_freight" : "0.00",
+    "order_pay_taxes" : "0.00",
+    "order_pay_way" : "未支付",
+    "order_receiver_name" : "李白",
+    "order_receiver_tel" : "13232323232",
+    "order_receiver_addr" : "北京市东城区11号",
+    "house_list" : [ {
+      "house_id" : "50",
+      "house_name" : "方正",
+      "order_goods_list" : [ {
+        "goods_id" : "xh1hqCdMrLqnzQDNFTu04IJCEZZVu4bf2eNEs68nRXs",
+        "item_id" : "INTR1800092404",
+        "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/1ac1afb7-cde5-4e80-ab39-7f538db97897.jpg",
+        "goods_name" : "Apple iPhone 8 Plus  64GB/256GB 移动联通电信4G手机内存:256GB,颜色:深空灰色",
+        "goods_price" : "7088.00",
+        "goods_standard" : "256GB、深空灰色",
+        "goods_num" : "3",
+        "apply_id" : "",
+        "goods_aftersale_state" : "0",
+        "goods_aftersale_code" : "当前商品不在退货/退款中",
+        "order_detail_id" : "603_22309238473092660_sod",
+        "apply_price" : 7088.00000000000000000000
+      }, {
+        "goods_id" : "H1TBIpPwCId9XmYWsigHV1izAuEkNJlNfjSNu5XCl4I",
+        "item_id" : "INTR3400093105",
+        "goods_img" : "//img-ghesh.imoba.com.cn/public/admin/77d93ef3-26ae-48d1-8277-1f525a42b0f3.jpg",
+        "goods_name" : "Apple iPad（第五代）9.7英寸(WLAN版)内存:128GB,颜色:深空灰色",
+        "goods_price" : "3188.00",
+        "goods_standard" : "128GB、深空灰色",
+        "goods_num" : "1",
+        "apply_id" : "",
+        "goods_aftersale_state" : "0",
+        "goods_aftersale_code" : "当前商品不在退货/退款中",
+        "order_detail_id" : "603_22309238480092661_sod",
+        "apply_price" : 3188.00000000000000000000
+      } ]
+    } ],
+    "user_id" : "001_7441486512002139_mem",
+    "order_time" : "2018-03-29 15:40:38",
+    "pointAmt" : "0",
+    "ecouponAmt" : "0",
+    "merDiscAmt" : "0",
+    "couponAmt" : "0",
+    "bankDiscAmt" : "0",
+    "bankOrderId" : "",
+    "invoiceUrl" : "",
+    "invoiceTittle" : "个人",
+    "invoiceTaxNo" : "",
+    "stages" : ""
+  },
+  "success" : true
+}
+
+#############################
+#填写订单页面获取商品详情API
+https://ghesh.imoba.com.cn/order/get_order_info.ajax
+
+Request:
+{
+  order_id: 1803291540C149176
+  order_state: 30
+  token: S8UUGARMHV8QNQMA1NERRSRY2UVPCW5G
+  type: 1
+  user_id: 001_7441486512002139_mem
+}
+
+Response:
+
+{
+  "ret" : "0",
+  "msg" : "OK",
+  "desp" : "成功",
+  "data" : {
+    "orderConfirmBeanList" : [ {
+      "stockId" : "50",
+      "storageName" : "方正",
+      "storageType" : 1,
+      "freight" : 0,
+      "totalGoods" : 24452.00,
+      "customs" : 0.00,
+      "delCustoms" : 0.00,
+      "amount" : 4,
+      "addressId" : "002_17390028564024213_mad",
+      "defFreight" : "",
+      "promotionSumMoney" : 0,
+      "discountAmount" : 0,
+      "isRealName" : "",
+      "orderConfirmDetailForms" : [ {
+        "inventoryId" : "119_6417355034001129_kc",
+        "stockId" : "50",
+        "storageType" : 1,
+        "storageName" : "方正",
+        "supplierId" : "117",
+        "supplierName" : "",
+        "goodsId" : "xh1hqCdMrLqnzQDNFTu04IJCEZZVu4bf2eNEs68nRXs",
+        "goodsName" : "Apple iPhone 8 Plus  64GB/256GB 移动联通电信4G手机内存:256GB,颜色:深空灰色",
+        "itemId" : "INTR1800092404",
+        "itemName" : "Apple iPhone 8 Plus  64GB/256GB 移动联通电信4G手机内存:256GB,颜色:深空灰色",
+        "price" : 7088.00,
+        "subtotal" : 21264.00,
+        "amount" : 3,
+        "texRate" : 0,
+        "goodsCustoms" : 0.00,
+        "middlePicturePath" : "//img-ghesh.imoba.com.cn/public/admin/1ac1afb7-cde5-4e80-ab39-7f538db97897.jpg",
+        "cutFlag" : false,
+        "promotionId" : "",
+        "rangeId" : "",
+        "ruleId" : "",
+        "promotionMessage" : "",
+        "promotionSumMoney" : 0,
+        "promotionType" : "",
+        "couponId" : "",
+        "discountAmount" : 0,
+        "goods_standard" : "256GB、深空灰色",
+        "threePrice" : "",
+        "sixPrice" : "",
+        "ninePrice" : "",
+        "twelvePrice" : "",
+        "eighteenPrice" : "",
+        "twentyFourPrice" : ""
+      }, {
+        "inventoryId" : "119_17462474755001301_kc",
+        "stockId" : "50",
+        "storageType" : 1,
+        "storageName" : "方正",
+        "supplierId" : "117",
+        "supplierName" : "",
+        "goodsId" : "H1TBIpPwCId9XmYWsigHV1izAuEkNJlNfjSNu5XCl4I",
+        "goodsName" : "Apple iPad（第五代）9.7英寸(WLAN版)内存:128GB,颜色:深空灰色",
+        "itemId" : "INTR3400093105",
+        "itemName" : "Apple iPad（第五代）9.7英寸(WLAN版)内存:128GB,颜色:深空灰色",
+        "price" : 3188.00,
+        "subtotal" : 3188.00,
+        "amount" : 1,
+        "texRate" : 0,
+        "goodsCustoms" : 0.00,
+        "middlePicturePath" : "//img-ghesh.imoba.com.cn/public/admin/77d93ef3-26ae-48d1-8277-1f525a42b0f3.jpg",
+        "cutFlag" : false,
+        "promotionId" : "",
+        "rangeId" : "",
+        "ruleId" : "",
+        "promotionMessage" : "",
+        "promotionSumMoney" : 0,
+        "promotionType" : "",
+        "couponId" : "",
+        "discountAmount" : 0,
+        "goods_standard" : "128GB、深空灰色",
+        "threePrice" : "",
+        "sixPrice" : "",
+        "ninePrice" : "",
+        "twelvePrice" : "",
+        "eighteenPrice" : "",
+        "twentyFourPrice" : ""
+      } ]
+    } ],
+    "memberAddressFormBean" : [ ],
+    "totalGoods" : 24452.00,
+    "customs" : 0.00,
+    "freight" : 0,
+    "promotionSumMoney" : 0,
+    "totalPayMoney" : 24452.00,
+    "immediately" : true,
+    "orderId" : "1803291540C149176",
+    "orderState" : "30",
+    "amount" : 4,
+    "discountAmount" : 0,
+    "sgScShopcartIdList" : [ ],
+    "promotionList" : [ ],
+    "invoiceContent" : [ ],
+    "mapList" : [ ],
+    "stages" : ""
+  },
+  "success" : true
+}
+
+
+
+
+#############################
+#获取收货地址列表API
+https://ghesh.imoba.com.cn/address/list.ajax
+Request:
+{
+  token: S8UUGARMHV8QNQMA1NERRSRY2UVPCW5G
+  user_id: 001_7441486512002139_mem
+}
+
+Response:
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "获取收货地址成功!",
+  "data" : [ {
+    "address_id" : "002_17390028564024213_mad",
+    "address_name" : "李白",
+    "address_mobile" : "13232323232",
+    "identity_number" : "undefined",
+    "province" : "北京",
+    "city" : "北京",
+    "area" : "东城区",
+    "detail_address" : "11号",
+    "status" : "1",
+    "detail_status" : "1"
+  } ],
+  "success" : true
+}
+#############################
+#添加地址API
+https://ghesh.imoba.com.cn/address/add.ajax
+Request：
+{
+  address_identity_card: undefined
+  address_mobile: 13812323232
+  address_name: sdf
+  area: 110101
+  city: 110100
+  detail_address: qweqwqe
+  province: 110000
+  token: VTEWRB2Q1Y82YN7CRSRKW9JPSYIC54LI
+  user_id: 001_7441486512002139_mem
+}
+
+#############################
+#删除收货地址API
+https://ghesh.imoba.com.cn/address/del.ajax
+
+Request：
+{
+
+  address_ids: 002_17390028564024213_mad
+  token: S8UUGARMHV8QNQMA1NERRSRY2UVPCW5G
+  user_id: 001_7441486512002139_mem
+}
+
+Response:
+
+{
+  "ret" : "0",
+  "msg" : "OK",
+  "desp" : "收货地址删除成功!",
+  "data" : {
+    "response" : 0,
+    "desp_string" : "收货地址删除成功!"
+  },
+  "success" : true
+}
+
+#############################
+#设置默认收获地址API
+https://ghesh.imoba.com.cn/address/default.ajax
+Request:
+{
+  address_id: 002_22314154819041677_mad
+  token: HP8UI7RV2CBXVFZKC0MGSUIUG4OHVQCA
+  user_id: 001_7441486512002139_mem
+}
+
+Response:
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "设为默认收货地址成功!",
+  "data" : {
+    "response" : 0,
+    "desp_string" : "设为默认收货地址成功!"
+  },
+  "success" : true
+}
+
+#############################
+#获取发票列表API
+https://ghesh.imoba.com.cn/order/get_member_invoice_list.ajax
+Request:
+{
+  invoiceType: 0 //0=>个人发票,1=> 单位发票
+  memberId: 001_7441486512002139_mem
+  token: S8UUGARMHV8QNQMA1NERRSRY2UVPCW5G
+  user_id: 001_7441486512002139_mem
+}
+
+Response:
+{
+  "ret" : "0",
+  "msg" : "获取获取发票列表成功!",
+  "desp" : "获取获取发票列表成功!",
+  "data" : [ {
+    "id" : "12fe39c9-fe4e-49fc-ae13-00dff23603e0",
+    "memberId" : "001_7441486512002139_mem",
+    "invoiceType" : "0",
+    "invoiceTittle" : "个人",
+    "invoiceTaxNo" : "",
+    "invoiceEmail" : "server@163.com",
+    "cancelFlag" : "0",
+    "createUser" : "001_7441486512002139_mem",
+    "createDate" : "2017-12-04 12:39:21.0",
+    "modifyUser" : "001_7441486512002139_mem",
+    "modifyDate" : "2018-03-29 17:09:50.0"
+  } ],
+  "success" : true
+}
+
+#############################
+#新建订单API
+https://ghesh.imoba.com.cn/order/createOrder.ajax
+Request:
+{
+  address_id: 002_22314154819041677_mad
+  goods_id: H1TBIpPwCId9XmYWsigHV1izAuEkNJlNfjSNu5XCl4I
+  goods_name: Apple iPad（第五代）9.7英寸(WLAN版)内存:32GB,颜色:深空灰色
+  goods_num: 1
+  immediately: yes
+  item_id: INTR3400093106
+  operateType: edit
+  stages: twelvePrice
+  ticketEmail: server@163.com
+  ticketHead: 个人
+  ticketId: 12fe39c9-fe4e-49fc-ae13-00dff23603e0
+  ticketType: 0
+  token: VTEWRB2Q1Y82YN7CRSRKW9JPSYIC54LI
+  user_id: 001_7441486512002139_mem
+
+}
+Response:
+
+
+#############################
+#获取商品规格API
+https://ghesh.imoba.com.cn/goods/get_goods_standard.ajax
+
+Request:
+{
+  goods_id: H1TBIpPwCId9XmYWsigHV1izAuEkNJlNfjSNu5XCl4I
+  goods_standard: {"standard_cons_id":"100","standard_cons_name":"32GB"} //该参数会随着用户勾选参数而不断变化
+  user_id: 001_7441486512002139_mem
+}
+
+Response:
+
+{
+  "ret" : "0",
+  "msg" : "ok",
+  "desp" : "获取商品规格成功",
+  "data" : {
+    "taxes" : "todo",
+    "standard_list" : [ {
+      "standard_name" : "内存",
+      "standard_id" : "100",
+      "standard_value" : "32GB",
+      "item_id" : "INTR3400093101",
+      "activity_flag" : "",
+      "activity_type" : "",
+      "activity_con" : "",
+      "activity_id" : "",
+      "flash_sale" : "",
+      "flash_sale_status" : "",
+      "flash_sale_time" : "",
+      "service_time" : "",
+      "flash_sale_end_time" : "",
+      "standard_price" : "",
+      "standard_img" : "",
+      "standard_count" : "",
+      "standard_count_limit" : "",
+      "stock_status" : "",
+      "goods_refer_price" : "",
+      "standard_cons" : [ {
+        "standard_cons_name" : "深空灰色",
+        "standard_cons_id" : "99",
+        "item_id" : "INTR3400093106",
+        "activity_flag" : "",
+        "activity_type" : "",
+        "activity_con" : "",
+        "activity_id" : "",
+        "flash_sale" : "",
+        "flash_sale_status" : "",
+        "flash_sale_time" : "",
+        "service_time" : "1522316698036",
+        "flash_sale_end_time" : "",
+        "standard_price" : "2388.00",
+        "standard_img" : "//img-ghesh.imoba.com.cn/public/admin/77d93ef3-26ae-48d1-8277-1f525a42b0f3.jpg",
+        "standard_count" : "13",
+        "standard_count_limit" : "5",
+        "stock_status" : "库存充足",
+        "goods_refer_price" : "2688.00",
+        "threePrice" : "",
+        "sixPrice" : "",
+        "ninePrice" : "",
+        "twelvePrice" : "2458.00",
+        "eighteenPrice" : "",
+        "twentyFourPrice" : "2472.00"
+      }, {
+        "standard_cons_name" : "银色",
+        "standard_cons_id" : "99",
+        "item_id" : "INTR3400093103",
+        "activity_flag" : "",
+        "activity_type" : "",
+        "activity_con" : "",
+        "activity_id" : "",
+        "flash_sale" : "",
+        "flash_sale_status" : "",
+        "flash_sale_time" : "",
+        "service_time" : "1522316697958",
+        "flash_sale_end_time" : "",
+        "standard_price" : "2388.00",
+        "standard_img" : "//img-ghesh.imoba.com.cn/public/admin/ca23b04a-ff96-450b-97ec-8f8c34f31d5a.jpg",
+        "standard_count" : "11",
+        "standard_count_limit" : "5",
+        "stock_status" : "库存充足",
+        "goods_refer_price" : "2688.00",
+        "threePrice" : "",
+        "sixPrice" : "",
+        "ninePrice" : "",
+        "twelvePrice" : "2458.00",
+        "eighteenPrice" : "",
+        "twentyFourPrice" : "2472.00"
+      }, {
+        "standard_cons_name" : "金色",
+        "standard_cons_id" : "99",
+        "item_id" : "INTR3400093101",
+        "activity_flag" : "",
+        "activity_type" : "",
+        "activity_con" : "",
+        "activity_id" : "",
+        "flash_sale" : "",
+        "flash_sale_status" : "",
+        "flash_sale_time" : "",
+        "service_time" : "1522316697872",
+        "flash_sale_end_time" : "",
+        "standard_price" : "2388.00",
+        "standard_img" : "//img-ghesh.imoba.com.cn/public/admin/13dcb4e2-7490-4366-8bf7-60c0e67549a4.jpg",
+        "standard_count" : "41",
+        "standard_count_limit" : "5",
+        "stock_status" : "库存充足",
+        "goods_refer_price" : "2688.00",
+        "threePrice" : "",
+        "sixPrice" : "",
+        "ninePrice" : "",
+        "twelvePrice" : "2458.00",
+        "eighteenPrice" : "",
+        "twentyFourPrice" : "2472.00"
+      } ],
+      "threePrice" : "",
+      "sixPrice" : "",
+      "ninePrice" : "",
+      "twelvePrice" : "2458.00",
+      "eighteenPrice" : "",
+      "twentyFourPrice" : "2472.00"
+    } ]
+  },
+  "success" : true
+}
+#############################
+#支付API
+https://ghesh.imoba.com.cn/order/payEGateway.ajax
+Request:
+{
+  order_id: 1803291748C314237
+  token: VTEWRB2Q1Y82YN7CRSRKW9JPSYIC54LI
+  user_id: 001_7441486512002139_mem
+}
+
+Response:
+
+###############################
+
+https://ghesh.imoba.com.cn/goods/get_goods_introduce.ajax
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+<!--首页-->
+<ion-view hide-nav-bar="true" view-title="HUAWEI产品专区" cache-view="false">
+    <style  type="text/css">
+        .home-channel{
+            border-bottom: 2px solid rgba(228,47,70,0.80) !important;
+            color:#D85D60;
+        }
+    </style>
+
+    <ion-header-bar class="bar bar-header item-input-inset commodity-category-header">
+        <button class="button icon ion-ios-arrow-left button-clear" ng-click="headerClose();"></button>
+        <h1 class="h1 title">HUAWEI产品专区</h1>
+        <button class="button icon button-clear" ng-click="phone();">
+            <img src="img/phone.png" class="header-phone">
+        </button>
+    </ion-header-bar>
+
+    <ion-content style="bottom: 50px">
+
+        <ion-slide-box class="home-slide" ng-class="{true:'showPager'}[showPager]"
+                       delegate-handle="slideboximgs" does-continue="true" auto-play="true">
+            <ion-slide ng-repeat="img in imglist">
+                <div><img ng-src="{{img.banner_image}}" ng-click="goActive(img)" ng-style="screenWidthStyle" style=""></div>
+            </ion-slide>
+        </ion-slide-box>
+        <div class="home-cat">
+            <div  class="home-cat-item" ng-repeat="item in columns" ng-click="goCategory(item.category_id)">
+                <img ng-src="{{item.category_image}}">
+                <span>{{item.category_name}}</span>
+            </div>
+
+        </div>
+ 
+        <div class="home-activity-title">
+            <img src="img/jchd.png">
+        </div>
+
+    </div>
+
+        <div style="background-color: white;display: table;margin: 10px;">
+
+            <div ng-repeat="goods in homeReocmmendList" class="col-50" style="padding:15px;float: left;background: white;border-bottom: 1px solid #f5f5f5; border-right: 1px solid #f5f5f5;position: relative;"  ng-click="toDetail(goods.goods_id)">
+                <img ng-src="{{goods.goods_flag}}" style="position: absolute;right: 5px;top: 0;width: 30px">
+                <div><img ng-src="{{goods.goods_image}}" style="width: 100%;"></div>
+                <div class="home-two-row-title">{{goods.goods_name}}</div>
+                <div>
+                    <span style="margin-left: 3px;color:#e42f46;font-size:14px;font-weight: 600">{{goods.goods_price | currency:"¥"}}</span>
+                    <span style="float:right;width: 45px;line-height: 15px;font-size: 12px;border:1px solid #e42f46;color:#e42f46;border-radius: 4px;text-align: center; " ng-if="goods.staging||goods.isStaging">分期</span>
+                    <span ng-if="goods.is_fengqi !=''"><img ng-src="{{goods.is_fengqi}}" style="width:30%;float: right;" ></span>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="hasmore" on-infinite="doLoadMore()" distance="10%"></ion-infinite-scroll>
+    </ion-content>
+
+    <!-- 底部-->
+    <ion-footer-bar class="padding-0 htwins-tabs " ng-controller="footerController">
+<!--         <div class="htwins-tabs">
+            <a id = "test" ng-click="test();" href="/demo.html" style="position: fixed; bottom: 12px;display: block;" >Pay</a>
+        </div> -->
+        <div class="htwins-tabs">
+            <div class="htwins-tabs-div">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-index-on.png">
+                </div>
+                <span class="color-red">首页</span>
+            </div>
+            <div class="htwins-tabs-div" ui-sref="category" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-product-off.png">
+                </div>
+                <span class="color-black-3">分类</span>
+            </div>
+
+            <div class="htwins-tabs-div" ng-click="goToShoppingCart()" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <div ng-if="shopCar.goodsCount > 0">
+                        <label class="message-badge maker-mine-shopCar-badge" ng-bind="shopCar.goodsCount"></label>
+                    </div>
+                    <img src="img/tab-car-off.png" class="position-r">
+                </div>
+                <span class="color-black-3">购物车</span>
+            </div>
+            <div class="htwins-tabs-div" ui-sref="mine" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-mine-off.png">
+                </div>
+                <span class="color-black-3">我的</span>
+            </div>
+        </div>
+
+    </ion-footer-bar>
+
+</ion-view>

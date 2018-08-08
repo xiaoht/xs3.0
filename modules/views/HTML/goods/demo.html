@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>查询客户默认收货地址</title>
+<script type="text/javascript" src="plugin/jquery.js"></script>
+<script type="text/javascript" src="plugin/hybrid_app.js"></script>
+<script type="text/javascript" src="plugin/icbc_client_core.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/fonts.css">
+  <link href="/assets/ionic.min.css" rel="stylesheet">
+<script type="text/javascript">
+function callLogin(e){
+	alert('first')
+	alert(e)
+}
+
+
+function test(e){
+	alert('second')
+	alert(e)
+}
+
+function backUp(){
+	history.go(-1);
+}
+
+function myMerLogin(){
+	hybrid_app.merLogin();
+}
+	
+function queryDefalutAdress() {
+	var cust_id = $("#cust_id").val();
+	//var cust_id = "TQUFFdScHY1EqI4M/GTFkSKJSyo7Xx73";
+	var app_id = "10000000000000002156";
+	if(cust_id == ""){
+		alert("加密通行证编号不可为空");
+		return;
+	};
+	hybrid_app.getDefaultAddress(cust_id,app_id);
+}
+function toAddressList(){
+	var cust_id = $("#cust_id").val();
+	//var cust_id = "TQUFFdScHY1EqI4M/GTFkSKJSyo7Xx73";
+	var app_id = "10000000000000002156";
+	if(cust_id == ""){
+		alert("加密通行证编号不可为空");
+		return;
+	};
+	hybrid_app.openAddress(cust_id,app_id);
+}
+function toThirdScan(){
+	hybrid_app.getThirdScan();
+}
+
+</script>
+</head>
+<body>	
+	<table>
+		<tr style="font-size:25px;color:blue;"><td id="addrSuccess"></td></tr>
+	</table>
+			
+		<table>
+			<tr><td>加密用户通行证编号：</td><td><input type="text" id="cust_id" value=""></td></tr>
+		</table>
+		<button onclick="backUp();" type="button">后退</button>
+		<button onclick="queryDefalutAdress();" type="button">查询客户默认收货地址</button>
+	
+		<table>
+			<tr><td>加密用户通行证编号：</td><td id="cust_id"></td></tr>
+			<tr><td>收货地址id：</td><td id="id"></td></tr>
+			<tr><td>收货姓名：</td><td id="name"></td></tr>
+			<tr><td>收货电话：</td><td id="phone"></td></tr>
+			<tr><td>详细地址：</td><td id="address"></td></tr>
+			<tr><td>省级名称：</td><td id="provinceName"></td></tr>
+			<tr><td>市级名称：</td><td id="cityName"></td></tr>
+			<tr><td>区级名称：</td><td id=districtName></td></tr> 
+			<tr><td>更新时间：</td><td id=updateTimeStr></td></tr> 
+			<tr><td>是否是默认地址：(1：是 0：不是)</td><td id="isDefault"></td></tr>
+		</table>
+		<button onclick="toAddressList();" type="button">选择其他收货地址</button>
+		<button onclick="toThirdScan();" type="button">第三方扫一扫</button>
+		<button onclick="mer();"  class = "icon ion-ios-arrow-left" type="button">doLogin</button>
+		 <a href="javascript:void(0);" class="ion-ios-arrow-left" id="backapp">asd</a>
+		<table>
+			<tr><td>扫一扫地址数据</td><td id="addressData"></td></tr>
+		</table>
+	<script type="text/javascript">
+		$(function(){
+			var url = window.location.href;
+			if(url.indexOf("?") != -1){
+				 var params = url.substr(url.indexOf("?"));
+				 var paramArray = params.split("&");
+				 var cust_id = paramArray[0];
+				 
+				 cust_id = cust_id.substr(cust_id.indexOf("=")+1);
+				 $("#cust_id").val(cust_id);
+			}
+			
+
+		});
+
+		function mer(){
+			
+		}
+		$(document).ready(function(){
+			hybrid_app.merLogin();
+			hybrid_app.merLogin(test);
+		})
+	</script>	
+</body>
+</html>

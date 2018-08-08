@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的优惠券</title>
+
+    <link rel="stylesheet" type="text/css" href="/assets/lib.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont/iconfont.css">
+    <style type="text/css">
+        h1{
+            margin-top: 0 !important;
+        }
+        .nav-menu {
+            z-index: 50;
+        }
+
+        .nav-menu .tab-list-nav {
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav-menu .tab-list-nav li {
+            display: inline-block;
+            width: 150px;
+            margin-left: 6%;
+            text-align: center;
+            line-height: 43px;
+        }
+
+        .nav-menu .tab-list-nav li:first-of-type {
+            margin-left: -12px;
+        }
+
+        .nav-menu .tab-list-nav li p {
+            display: inline-block;
+            padding: 0 13px;
+            font-size: 16px;
+            color: #3e3e3e;
+        }
+
+        .nav-menu .tab-list-nav li.active p {
+            color: #e42f46;
+        }
+    </style>
+
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="nav-bar">
+    <div class="nav-menu">
+        <a href="javascript:void(0);" class="iconfont icon-back icon-chevron-thin-left" id="backapp"></a>
+        <ul class="tab-list-nav">
+            <li class="active">
+                <p>我的优惠券</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div style="background-color: white;display: table;margin: 10px;">
+    <div class="my_coupon" class="col-50" style="padding:15px;float: left;background: white;border-bottom: 1px solid #f5f5f5; border-right: 1px solid #f5f5f5;position: relative;">
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/assets/hybrid_app.js"></script>
+<script type="text/javascript" src="/assets/common.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+<script>
+    $(function () {
+        var mycouponcodeApi = 'v1/coupon/coupon-code-list';
+        var paramDic = getUrlString();
+        var user_id = paramDic["user_id"];
+        var back = document.getElementById("backapp");
+        var type = paramDic["type"];
+        // 原生返回
+        back.onclick = function () {
+            window.location.href='/#/home';
+        };
+        function mycouponcode() {
+            if (user_id != undefined){
+                var urlHeader = ajaxLink + mycouponcodeApi;
+                var dataParam;
+                dataParam = "user_id="+user_id;
+                //成功后执行的方法
+                function sucGetOrderSub(response) {
+                    if(response.ret == 0){
+                        var html='';
+                        for (var i in response.data){
+                            html += '<a href="/#/home"><div><img src="'+response.data[i].pic+'" style="width: 100%;margin-bottom: 10px"></div></a>';
+                        }
+                        $('.my_coupon').html(html);
+                    }else{
+                        errorToken();
+                    }
+                }
+                ajaxWithHeader(urlHeader, dataParam, sucGetOrderSub,'GET');
+            }
+        }
+        mycouponcode();
+    })
+</script>
+</body></html>

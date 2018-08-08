@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta http-equiv="cache-control" content="max-age=1200, public">
+  <title>Apple产品专区</title>
+  <link rel="stylesheet" type="text/css" href="https://res-ghesh.imoba.com.cn/modules/views/HTML/resources/fonts/fonts.css">
+  <link href="lib\ionic\css\ionic.min.css" rel="stylesheet">
+  <link href="css\style.css" rel="stylesheet">
+  <link href="css\activeList.css" rel="stylesheet">
+  <!--<link href="css/ding.css" rel="stylesheet">-->
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+  <script src="https://res-ghesh.imoba.com.cn/lib/ionic/js/ionic.bundle.min.js"></script>
+  <script src="https://res-ghesh.imoba.com.cn/lib/ionic/js/upload/ng-file-upload-shim.js"></script>
+  <script src="https://res-ghesh.imoba.com.cn/lib/ionic/js/upload/ng-file-upload.js"></script>
+  <script src="https://res-ghesh.imoba.com.cn/lib/ng-file-model.js"></script>
+  <script src="https://res-ghesh.imoba.com.cn/lib/datePicker/dateUtil.js"></script>
+  <script src="https://res-ghesh.imoba.com.cn/js/jquery-1.8.3.js"></script>
+  <script src="modules\views\HTML\resources\js\common\common.js"></script>
+    <script type="text/javascript" src="js\hybrid_app.js"></script>
+  <script src="modules\views\HTML\resources\js\ajax\ajax.js"></script>
+  <script src="modules\views\HTML\resources\js\ajax\b64_hmac_sha1.js"></script>
+  <script src="js\ngIOS9UIWebViewPatch.js"></script>
+  <script src="js\UUID.js"></script>
+  <script src="modules\app.js"></script>
+  <script src="modules\common\urlService.js"></script>
+  <script src="modules\common\user.js"></script>
+  <script src="modules\common\service.js"></script>
+  <script src="modules\controllers\mine\mineCtrl.js"></script>
+  <script src="modules\controllers\activeList\activeListController.js"></script>
+  <script src="modules\common\popupUtil.js"></script>
+  <script src="modules\common\checkUtil.js"></script>
+  <script src="modules\common\loadingUtil.js"></script>
+  <script src="modules\controllers\mine\personalDataCtrl.js"></script>
+  <script src="modules\services\mine\personalDataService.js"></script>
+  <script src="modules\services\mine\myFootprintService.js"></script>
+  <script src="modules\constants.js"></script>
+  <script src="modules\common\filters.js"></script>
+  <script src="modules\common\commonService.js"></script>
+  <script src="modules\controllers\home\footerController.js"></script>
+  <script src="modules\services\mine\bToCService.js"></script>
+  <script src="modules\controllers\mine\newconllectionController.js"></script>
+  <script src="modules\controllers\mine\myFootprintController.js"></script>
+  <script src="modules\services\home\homeServices.js"></script>
+  <script src="modules\services\commodity\storeServices.js"></script>
+  <script src="modules\services\commodity\seckillServices.js"></script>
+  <script src="modules\services\commodity\commodityServices.js"></script>
+  <script src="modules\services\commodity\categoryServices.js"></script>
+  <script src="modules\services\commodity\goodsListServices.js"></script>
+  <script src="modules\controllers\home\homeController.js"></script>
+  <script src="modules\controllers\commodity\seckillController.js"></script>
+  <script src="modules\controllers\commodity\categoryController.js"></script>
+  <script src="modules\services\mine\mineServices.js"></script>
+  
+
+</head>
+<body ng-app="starter">
+<!--
+  The nav bar that will be updated as we navigate between views.
+-->
+<ion-nav-bar animation="nav-title-slide-ios7" type="bar-positive" back-button-type="button-icon" back-button-icon="ion-arrow-left-c" align-title="center" class="text-align-c htwins-head">
+  <ion-nav-back-button class="button-icon icon ion-ios-arrow-left color-white"></ion-nav-back-button>
+</ion-nav-bar>
+<ion-nav-view></ion-nav-view>
+<!--<ion-nav-bar class="bar-stable">-->
+<!--<ion-nav-back-button>-->
+<!--</ion-nav-back-button>-->
+<!--</ion-nav-bar>-->
+<!--
+  The views will be rendered in the <ion-nav-view> directive below
+  Templates are in the /templates folder (but you could also
+  have templates inline in this html file if you'd like).
+-->
+<!--<ion-nav-view></ion-nav-view>-->
+
+<div class="progress-bar" ng-if="showLoading" style="padding-top: 50%;padding-bottom: 100%;">
+  <!-----------APP页面在加载过程中，页面应该可以滑动 bug Begin------------->
+  <!--ng-style="{'padding-top':(deviceHeight-44-50-100)/2,'height':spinnerHeight}"-->
+  <!-----------APP页面在加载过程中，页面应该可以滑动 bug End------------->
+  <img src="https://res-ghesh.imoba.com.cn/img/icon-loading01.gif" style="border-radius: 5px;">
+</div>
+</body>
+</html>

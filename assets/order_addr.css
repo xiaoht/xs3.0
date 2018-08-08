@@ -1,0 +1,152 @@
+@charset "utf-8";
+.items, .addr-tit, .icon-user span {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    position: static;
+    color: #3e3e3e;
+}
+
+.addr-box {
+    padding-bottom: 100px;
+}
+
+.items {
+    padding: 0 5px;
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.addr-tit {
+    padding: 0 9px;
+    height: 40px;
+    line-height: 39px;
+    border-bottom: 1px solid #eee;
+}
+
+.addr-tit-default {
+    float: left;
+}
+
+.addr-tit h2 {
+    font-size: 15px;
+}
+
+.addr-tit i.radio {
+    line-height: 35px;
+    color:#e42f46;
+}
+
+.addr-tit i {
+    margin-right: 6px;
+    font-size: 17px;
+    color: #999;
+}
+
+.addr-tit span {
+    font-size: 14px;
+    color: #3e3e3e;
+    margin-bottom: 10px;
+    /* line-height: 30px; */
+}
+.addr-tit span.right{
+    color:#e42f46;
+}
+.addr-info {
+    padding: 12px 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.addr-nametel {
+    height: 18px;
+    line-height: 18px;
+}
+
+.addr-nametel h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.addr-nametel i {
+    float: left;
+    font-size: 16px;
+    margin: 1px 6px 1px 0;
+}
+
+.addr-nametel span.tel {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.addr-nametel span.ca-icon, .addr-nametel span.un-ca-icon {
+    margin-left: 6px;
+    display: block;
+    width: 42px;
+    height: 18px;
+    border-radius: 4px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.ca-icon {
+    border: 1px solid #999;
+}
+
+.un-ca-icon {
+    color: #e42f46;
+    border: 1px solid #e42f46;
+}
+
+.addr-info p {
+    margin: 10px 0 15px 0;
+    font-size: 12px;
+    line-height: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    /*width:80%;*/
+    color:#6e6e6e;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    width: 100%;
+    padding: 12px 0;
+    background-color: #f8f8f8;
+}
+
+footer .new-btn {
+    margin: 0 auto;
+    width: 85%;
+    height: 35px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #e42f46;
+    line-height: 35px;
+    margin-bottom: 1rem;
+}
+
+.addr-box-empty {
+    margin: 40px 0;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 30px;
+    line-height: 26px;
+}
+.icon-chevron-thin-right{
+    content: "\e93a";
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}

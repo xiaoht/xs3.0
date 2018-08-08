@@ -1,0 +1,41 @@
+<ion-view view-title="HUAWEI产品专区" has-header="true" hide-nav-bar="true" cache-view="false">
+
+  <ion-header-bar class="bar bar-header item-input-inset myFootHeader">
+    <button class="button icon ion-ios-arrow-left button-clear" ng-click="backButtonOnclick()"></button>
+    <h1 class="h1 title">我的足迹</h1>
+  </ion-header-bar>
+  <ion-content class="background-white">
+
+    <div class="list my-foot-list">
+      <div class="content my-footprint-head-div">
+        <article>
+          <div class="my-footprint-section" ng-repeat="myFootItem in myFootPrintList" >
+            <div class="row my-foot-list-div" ng-if="myFootItem.glance_date">
+              <div class="col my-foot-list-foo" ng-bind="myFootItem.glance_date">
+              </div>
+            </div>
+            <div class="my-footprint-div-big2">
+
+              <div class="row my-foot-list-p" ng-click="goToGoodsDetail_2(myFootItem.goods_id)">
+
+                <div class="col-25" style="margin-top: 3%">
+                  <img class="my-foot-list-img" width="60px" height="60px" ng-src="{{myFootItem.goods_img}}">
+                </div>
+                <div class="col-75 my_foot_mar_3">
+                  <p class="my-foot-p-n">{{myFootItem.goods_name}}</p>
+                  <p class="my-footprint-font"><span class="my-footprint-span" ng-bind="myFootItem.goods_price | currency: '&yen'"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="row" ng-class="{'my-footprint-head2':myFootList == null || myFootList.length == 0,'my-footprint-head':myFootList != null && myFootList.length != 0}"></div>
+    <ion-infinite-scroll ng-if="hasmore" on-infinite="doLoadMore()" distance="10%"></ion-infinite-scroll>
+  </ion-content>
+  <div style="position: absolute;margin-bottom: 0px;height:70px">
+    <div style="width: 70%;float: left"></div>
+    <div style="width: 30%;float: left;background-color: red"></div>
+  </div>
+</ion-view>

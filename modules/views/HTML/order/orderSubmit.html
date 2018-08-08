@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0"> <!-- 清缓存 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- 禁止手动缩放 -->
+    <meta name="screen-orientation" content="portrait"> <!-- UC强制竖屏 -->
+    <meta name="x5-orientation" content="portrait"> <!-- QQ强制竖屏 -->
+    <meta name="apple-touch-fullscreen" content="yes"> <!-- 添加到主屏幕后全屏 -->
+    <meta name="wap-font-scale" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- 全屏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>填写订单</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="/assets/lib.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/assets/order_submit.css">
+    <link href="/assets/ionic.min.css" rel="stylesheet">  
+    <style type="text/css">
+         h1{
+           margin-top: 0 !important;
+         }
+         #verify-code-input{
+            border: 1px solid #e3e3e3 ;
+            /*color: #e42f46;*/
+         }
+         #verify-code{
+            color: #e42f46 ;
+         }
+         #verify-code-box{
+            position: fixed;
+            z-index: 999;
+            width: 30%;
+            height: 58px;
+            bottom: 0px;
+            left: 4px;
+            background: white
+               
+         }
+         #verify-code-box .verify-line span{
+             font-size: 12px !important;
+             font-weight: 800;
+         }
+         #verify-code-box input{
+            width: 100%;
+            display: inline-block;
+            background: white;
+            padding-left: 8px;
+            font-weight: 800;
+         }
+         .container select{
+             float: right;
+             width:240px; height:30px;
+             overflow:hidden;
+             border:1px solid #ccc;
+             -moz-border-radius: 5px; /* Gecko browsers */
+             -webkit-border-radius: 5px; /* Webkit browsers */
+             border-radius:5px;
+         }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-menu">
+            <a href="javascript:void(0);" class="ion-ios-arrow-back icon-chevron-thin-left" id="backapp"></a>
+            <h1 class="nav-tit">填写订单</h1>
+        </div>
+    </div>
+    <!-- 正文 -->
+    <div id="wrapCon" style="">
+        <!-- 地址信息 -->
+        <div class="container delivery-addr" id="addressBos"><p class="address-empty">请选择收货地址</p><i class="icon-chevron-thin-right iconRight ion-ios-arrow-right"></i></div>
+        <!-- 订单信息 -->
+        <div class="container goods-detail">
+            <!-- 商品 -->
+            <div class="goods-box" id="goodsBox">
+                <div class="" id="imgList"></div>
+                <div class="clear"></div>
+            </div>
+            <!-- 优惠券 -->
+<!--             <div class="coupon item-box no-border" id="couponBox">
+                <h2>优惠券</h2>
+                <span class="">无</span>
+                <i class="icon-chevron-thin-right iconRight ion-ios-arrow-right"></i>
+                <div class="clear"></div>
+            </div> -->
+            <!-- 发票 -->
+            <div class="bill item-box" id="billBbox">
+                <h2>发票信息</h2>
+                <span>无</span>
+                <i class="icon-chevron-thin-right iconRight ion-ios-arrow-right"></i>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- 支付信息 -->
+        <div class="container pay-detial">
+            <ul>
+                <li><h2>商品金额</h2><span id="goodsAmount">￥0.00</span></li>
+                <li><h2>运费金额</h2><span id="freight">￥0.00</span></li>
+                <li style="display: none"><h2>关税金额</h2><span id="customs">￥0.00</span></li>
+                <!-- <li style="display: none"><h2>活动优惠</h2><span id="activities_amount">-￥0.00</span></li> -->
+                <li><h2>优惠券选择 </h2><select id="coupon_list"><option value="">暂无可使用的优惠券</option></select></li>
+                <li><h2>优惠金额 </h2><span id="coupon_discount">-￥0.00</span></li>
+                <li class="submitFq"><h2>分期</h2><span id="goodsFqAmount">￥0.00</span></li>
+            </ul>
+        </div>
+        <input type="hidden" id="old_coupon_discount">
+        <input type="hidden" id="old_real_payment">
+        <!--<div class="container pay-detial" style="border-top: none;margin-bottom:0px; position: fixed; width: 100%; bottom: 49px;background-color: #f8f8f8;">
+            <ul>
+                <li><h2 style=" color: #e42f46;">*双十二打call活动200元以上面额优惠金额在支付订单时可见</h2></li>
+            </ul>
+        </div>-->
+        <!-- 支付 -->
+            <div  id="verify-code-box">
+                <div class="verify-line">
+                    <span class="verify-label">验证码：</span>
+                    <span id="verify-code">75486</span>
+                </div>
+                <div class="verify-line">
+                    <input type="text" id="verify-code-input">
+                </div>
+            </div>
+        <footer class="order-sub" id="orderSubWrap">
+
+
+                <div class="pay-sum">实付款：<span id="real_payment">￥0.00</span></div>
+                <div class="sub-btn" id="orderSubBtn">提交订单</div>
+
+            
+        </footer>
+    </div>
+
+<script type="text/javascript" src="/assets/jquery-1.8.3.js"></script>
+  <script type="text/javascript" src="/assets/hybrid_app.js"></script>
+  <script type="text/javascript" src="/assets/common.js"></script>
+<script type="text/javascript" src="/assets/b64_hmac_sha1.js"></script>
+<script type="text/javascript" src="/assets/ajax.js"></script>
+<script type="text/javascript" src="/assets/orderSubmit.js"></script>
+</body></html>

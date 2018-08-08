@@ -1,0 +1,188 @@
+<!--个人中心-->
+<ion-view view-title="HUAWEI产品专区" has-header="true" hide-nav-bar="true" cache-view="false">
+    <ion-header-bar class="bar bar-header item-input-inset ">
+        <button class="button icon ion-ios-arrow-left button-clear" ng-click="headerGoHome();"></button>
+        <h1 class="h1 title"></h1>
+        <!--ng-click="goToPersonalData();"-->
+        <!--<button class="button icon button-clear" >-->
+            <!--<img src="img/settings.png" class="header-phone">-->
+        <!--</button>-->
+    </ion-header-bar>
+
+    <ion-content class="has-tabs">
+        <div class="mine-user-head-bg mine-full">
+            <!-- 登录状态 start-->
+            <div class="mine-full" >
+                <div class="mine-user-picture">
+                    <img ng-src="{{mineInfos.smallIconPath | headImgFilter}}" class="mine-user-img">
+                    <div class="mine-user-login-name-div">
+                        {{mineInfos.user_name}}
+                    </div>
+                </div>
+
+            </div>
+            <!-- 登录状态 end-->
+            <!-- 未登录状态 start -->
+            <!--<div class="maker-mine-unlogin-div" ng-if="user.yhm == 0">-->
+                <!--<div class="maker-mine-unlogin-div-user-yhm"-->
+                     <!--ng-click="gotoLogin()">-->
+                    <!--<img ng-src="img/headImgDefault.png" class="mine-user-img2">-->
+                <!--</div>-->
+                <!--<div class="mine-user-unlogin-tologin" ng-click="gotoLogin()">-->
+                    <!--点击登录-->
+                <!--</div>-->
+            <!--</div>-->
+            <!-- 未登录状态 end -->
+        </div>
+
+        <div class="mine-ionic-all-div">
+            <div class="mine-ionic-all-div-click" ng-click="goToAll()">
+                <div class="mine-ionic-all-div-lab">
+                    <div class="mine-page-second-img mine-icon-all">
+                        <!--<div ng-if="user.yhm == 1 && mineInfos.allOrderBadge> 0">-->
+                            <!--&lt;!&ndash;<label class="mine-badge" ng-bind="mineInfos.allOrderBadge"></label>&ndash;&gt;-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="mine-ionic-all-text-div">全部</div>
+            </div>
+            <div class="mine-ionic-all-div-click" ng-click="goToWaitPay()">
+                <div class="mine-ionic-all-div-lab">
+                    <div class="mine-page-second-img mine-icon-pay">
+                        <div ng-if="order_no_pay_num> 0">
+                            <label class="mine-badge" ng-bind="order_no_pay_num"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mine-ionic-all-text-div">待付款</div>
+            </div>
+            <div class="mine-ionic-all-div-click" ng-click="goToWaitSend()">
+                <div class="mine-ionic-all-div-lab">
+                    <div class="mine-page-second-img mine-icon-shipments-img">
+                        <div ng-if="order_no_hair_num> 0">
+                            <label class="mine-badge" ng-bind="order_no_hair_num"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mine-ionic-all-text-div">待发货</div>
+            </div>
+            <div class="mine-ionic-all-div-click" ng-click="goToWaitReceive()">
+                <div class="mine-ionic-all-div-lab">
+                    <div class="mine-page-second-img mine-icon-goods-receipt-img">
+                        <div ng-if="order_no_receive_num> 0">
+                            <label class="mine-badge" ng-bind="order_no_receive_num"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mine-ionic-all-text-div">待收货</div>
+            </div>
+
+        </div>
+
+ <!--        <div class="mine-list-background-div">
+            <div class="mine-list-item-click-div" >
+                <div class="mine-list-item-img-div mine-list-title-div">
+                    <span  class="mine-list-title">&nbsp;</span>
+                </div>
+                <div class="mine-list-item-text-div">
+                    <div class="mine-list-item-text font-size-15">常用工具</div>
+                </div>
+            </div> -->
+  <!--           <div class="mine-list-item-click-div" ng-click="goToMyCoupon()">
+                <div class="mine-list-item-img-div">
+                    <img ng-src="img/icon-yhq.png" class="mine-list-img maker-mine-list-img-margin ">
+                </div>
+                <div class="mine-list-item-text-div">
+                    <div class="mine-list-item-text font-size-15">我的优惠券</div>
+                </div>
+                <div class="mine-list-item-right-div">
+                    <i class="icon ion-ios-arrow-right mineCenterRight mine-list-item-right"></i>
+                </div>
+            </div> -->
+
+ <!--            <div class="mine-list-item-click-div" ng-click="goToCollect()">
+                <div class="mine-list-item-img-div">
+                    <img ng-src="img/icon-collect.png" class="mine-list-img maker-mine-list-img-margin">
+                </div>
+                <div class="mine-list-item-text-div">
+                    <div class="mine-list-item-text font-size-15">我的收藏</div>
+                </div>
+                <div class="mine-list-item-right-div">
+                    <i class="icon ion-ios-arrow-right mineCenterRight mine-list-item-right"></i>
+                </div>
+            </div> -->
+
+
+            <div class="mine-list-item-click-div" ng-click="goToAddressManageViews()">
+                <div class="mine-list-item-img-div">
+                    <img ng-src="img/icon-addressManage.png" class="mine-list-img maker-mine-list-img-margin">
+                </div>
+                <div class="mine-list-item-text-div">
+                    <div class="mine-list-item-text font-size-15">地址管理</div>
+                </div>
+                <div class="mine-list-item-right-div">
+                    <i class="icon ion-ios-arrow-right mineCenterRight mine-list-item-right"></i>
+                </div>
+            </div>
+
+<!--             <div class="mine-list-item-click-div" ng-click="goToMyFootprintViews()">
+                <div class="mine-list-item-img-div">
+                    <img ng-src="img/icon-footprint.png" class="mine-list-img maker-mine-list-img-margin">
+                </div>
+                <div class="mine-list-item-text-div">
+                    <div class="mine-list-item-text font-size-15">我的足迹</div>
+                </div>
+                <div class="mine-list-item-right-div">
+                    <i class="icon ion-ios-arrow-right mineCenterRight mine-list-item-right"></i>
+                </div>
+            </div> -->
+
+
+
+        </div>
+    </ion-content>
+
+
+    <!-- 底部-->
+    <ion-footer-bar class="padding-0 htwins-tabs " ng-controller="footerController">
+        <div class="htwins-tabs">
+            <div class="htwins-tabs-div" ui-sref="home" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-index-off.png">
+                </div>
+                <span class="color-black-3">首页</span>
+            </div>
+            <div class="htwins-tabs-div" ui-sref="category" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-product-off.png">
+                </div>
+                <span class="color-black-3">分类</span>
+            </div>
+<!--             <div class="htwins-tabs-div"  ui-sref="active" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <div ng-if="massage.messageCount > 0">
+                        <label class="message-badge maker-mine-message-badge" ng-bind="massage.messageCount"></label>
+                    </div>
+                    <img src="img/tab-msg-off.png" class="position-r">
+                </div>
+                <span class="color-black-3">活动</span>
+            </div> -->
+            <div class="htwins-tabs-div" ng-click="goToShoppingCart()" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <div ng-if="shopCar.goodsCount > 0">
+                        <label class="message-badge maker-mine-shopCar-badge" ng-bind="shopCar.goodsCount"></label>
+                    </div>
+                    <img src="img/tab-car-off.png" class="position-r">
+                </div>
+                <span class="color-black-3">购物车</span>
+            </div>
+            <div class="htwins-tabs-div">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-mine-on.png">
+                </div>
+                <span class="color-red">我的</span>
+            </div>
+        </div>
+    </ion-footer-bar>
+
+</ion-view>

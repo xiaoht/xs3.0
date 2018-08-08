@@ -1,0 +1,74 @@
+<!--个人中心-->
+<ion-view view-title="HUAWEI产品专区" has-header="true" hide-nav-bar="true" cache-view="false">
+    <ion-header-bar class="bar bar-header item-input-inset ">
+        <button class="button icon ion-ios-arrow-left button-clear" ng-click="headerGoHome();"></button>
+        <h1 class="h1 title">活动</h1>
+        <!--ng-click="goToPersonalData();"-->
+        <!--<button class="button icon button-clear" >-->
+        <!--<img src="img/settings.png" class="header-phone">-->
+        <!--</button>-->
+    </ion-header-bar>
+    <ion-content class="has-tabs">
+        <div class="active-center" style="background-color: #f8f8f8;">
+            
+            <div class="active-list twentyFourActivity">
+                <div class="active-text">
+                    24期活动
+                    <div class="active-text-right"></div>
+                    <!-- <i class="icon-chevron-thin-right iconRight"></i> -->
+                </div>
+                <img class="active-list-img" src="/img/action/twentyFourActivity/tf.jpg" alt="">
+            </div>
+            <div class="active-list twentyFourActivity">
+                <div class="active-text">
+                    iphone-x活动
+                    <div class="active-text-right"></div>
+                    <!-- <i class="icon-chevron-thin-right iconRight"></i> -->
+                </div>
+                <img class="active-list-img" src="/img/action/twentyFourActivity/phonex.jpg" alt="">
+            </div>
+            
+        </div>
+    </ion-content>
+    <!-- 底部-->
+    <ion-footer-bar class="padding-0 htwins-tabs " ng-controller="footerController">
+        <div class="htwins-tabs">
+            <div class="htwins-tabs-div" ui-sref="home" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-index-off.png">
+                </div>
+                <span class="color-black-3">首页</span>
+            </div>
+            <div class="htwins-tabs-div" ui-sref="category" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-product-off.png">
+                </div>
+                <span class="color-black-3">分类</span>
+            </div>
+            <div class="htwins-tabs-div" ui-sref="active" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <div ng-if="massage.messageCount > 0">
+                        <label class="message-badge maker-mine-message-badge" ng-bind="massage.messageCount"></label>
+                    </div>
+                    <img src="img/tab-msg-on.png" class="position-r">
+                </div>
+                <span class="color-red">活动</span>
+            </div>
+            <div class="htwins-tabs-div" ng-click="goToShoppingCart()" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <div ng-if="shopCar.goodsCount > 0">
+                        <label class="message-badge maker-mine-shopCar-badge" ng-bind="shopCar.goodsCount"></label>
+                    </div>
+                    <img src="img/tab-car-off.png" class="position-r">
+                </div>
+                <span class="color-black-3">购物车</span>
+            </div>
+            <div class="htwins-tabs-div" ui-sref="mine" nav-transition="none">
+                <div class="htwins-tabs-div-img">
+                    <img src="img/tab-mine-off.png">
+                </div>
+                <span class="color-black-3">我的</span>
+            </div>
+        </div>
+    </ion-footer-bar>
+</ion-view>

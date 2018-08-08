@@ -1,0 +1,159 @@
+/*
+* @Author: 孙世一
+* @Date:   2017-11-22 17:23:54
+* @Last Modified by:   孙世一
+* @Last Modified time: 2017-11-27 16:01:24
+*/
+
+
+/*==================*/
+
+.active-img>img {
+    width: 100%;
+}
+
+.active-presentation {
+    text-align: center;
+}
+
+.active-presentation h2 {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 600;
+    color: #000000;
+    padding: 20px 0;
+}
+
+.active-presentation p {
+    line-height: 25px;
+    font-size: 12px;
+    color: #3e3e3e;
+}
+
+.active-presentation>p:nth-of-type(4) {
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.active-authentication {
+    padding: 30px 80px 30px 80px;
+}
+
+.active-authentication h2 {
+    font-size: 14px;
+    color: #3e3e3e;
+    margin-left: 10px;
+}
+
+.active-authentication p {
+    padding-right: 20px;
+}
+
+.active-authentication input {
+    background: #ffffff;
+    border: 1px solid #dedede;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.active-authentication button {
+    background: #fe6307;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+
+/*==活动列表=============*/
+
+.active-list {
+    width: 100%;
+    margin-top: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.active-text {
+    background: #ffffff;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    /* width:100%; */
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding-left: 20px;
+    color: #000;
+}
+
+.active-content {
+    /* background: url(../../img/common/active-img1.jpg) repeat; */
+    background-size: 100%;
+    padding-top: 30px;
+}
+
+.active-list-img {
+    width: 100%;
+}
+
+.iconRight {
+    font-size: 14px;
+    color: #9e9e9e;
+    position: absolute;
+    right: 20px;
+    margin-top: 13px;
+}
+
+.head-img {
+    width: 100%;
+}
+
+.goods-img {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.ac03-div {
+    padding-right: 10px;
+}
+
+.nav-bar {
+    position: fixed;
+}
+
+.active-text {
+    position: relative;
+}
+
+.active-text .active-text-right {
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -moz-transform: rotate(45deg);
+    /* Firefox */
+    -webkit-transform: rotate(45deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(45deg);
+    /* Opera */
+    border: 1px solid #bbb;
+    border-left: none !important;
+    border-bottom: none !important;
+    right: 0;
+    top: 50%;
+    right: 23px;
+    margin-top: -6px;
+}
